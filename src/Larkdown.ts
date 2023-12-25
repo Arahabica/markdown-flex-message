@@ -1,10 +1,15 @@
-import { MarkDownParser } from "./lib/MarkDownParser"
+import { MainConverter } from "./converter/MainConverter"
+import { MarkDownParser } from "./parser/MarkDownParser"
 import { FlexContainer } from "@line/bot-sdk"
+import { FlexConverter } from "./types"
 
 export class Larkdown {
   parser: MarkDownParser
+  converter: FlexConverter
+
   constructor() {
     this.parser = new MarkDownParser()
+    this.converter = new MainConverter()
   }
   convert(markdown: string): FlexContainer {
     const flex: FlexContainer = {
@@ -17,37 +22,8 @@ export class Larkdown {
     }
     const result = this.parser.parse(markdown)
     result.forEach((token) => {
-      if (token.type === 'heading') {
-        const text = token.text
-        let size = "md"
-        let paddingBottom = "md"
-        if (token.depth === 1) {
-          size = "xl"
-          paddingBottom = "xl"
-        } else if (token.depth === 2) {
-          size = "lg"
-          paddingBottom = "lg"
-        }
-        flex.body?.contents.push({
-          type: "box",
-          layout: "vertical",
-          contents: [
-            {
-              type: "text",
-              text,
-              weight: "bold",
-              size
-            }
-          ],
-          paddingBottom
-        })
-      } else {
-        const text = token.raw
-        flex.body?.contents.push({
-          type: 'text',
-          text,
-        })
-      }
+      const content = this.converter.convert(token)
+      flex.body?.contents.push(content)
     })
     return flex
   }

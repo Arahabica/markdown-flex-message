@@ -1,4 +1,4 @@
-import { MarkDownParser } from '../../lib/MarkDownParser'
+import { MarkDownParser } from '../../parser/MarkDownParser'
 import { it, describe, expect } from 'vitest'
 
 describe('MarkDownParser', () => {
