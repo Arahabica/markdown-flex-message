@@ -22,8 +22,10 @@ export class Larkdown {
     }
     const result = this.parser.parse(markdown)
     result.forEach((token) => {
-      const content = this.converter.convert(token)
-      flex.body?.contents.push(content)
+      const contents = this.converter.convert(token)
+      contents.forEach((content) => {
+        flex.body?.contents.push(content)
+      })
     })
     return flex
   }

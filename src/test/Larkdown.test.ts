@@ -1,94 +1,41 @@
 import { Larkdown, convert } from '../Larkdown'
 import { it, describe, expect } from 'vitest'
+import { promises as fsPromises } from 'fs'
+import { join } from 'path'
 
+const dir = join(__dirname, 'resources')
 describe('Larkdown', () => {
   describe('Larkdown#convert', () => {
-    it('should return an array of tokens', () => {
+    it('should return an array of tokens', async () => {
+      const markdown = await fsPromises.readFile(join(dir, '01hello.md'), 'utf-8')
+      const json = await fsPromises.readFile(join(dir, '01hello.json'), 'utf-8')
       const larkdown = new Larkdown()
-      const flexContainer = larkdown.convert('Hello world')
+      const flexContainer = larkdown.convert(markdown)
       // console.log(JSON.stringify(flexContainer, null, 2))
       expect(flexContainer.type).toEqual('bubble')
-      expect(flexContainer).toEqual({
-        "type": "bubble",
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "Hello world"
-            }
-          ]
-        }
-      })
+      expect(flexContainer).toEqual(JSON.parse(json))
     })
   })
 })
 describe('convert', () => {
-  it('ok', () => {
-    const flexContainer = convert('Hello world')
-    console.log(JSON.stringify(flexContainer, null, 2))
-    expect(flexContainer).toEqual({
-      type: "bubble",
-      body: {
-        type: "box",
-        layout: "vertical",
-        contents: [
-          {
-            type: "text",
-            text: "Hello world"
-          }
-        ]
-      }
-    })
+  it('ok', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '01hello.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '01hello.json'), 'utf-8')
+    const flexContainer = convert(markdown)
+    expect(flexContainer).toEqual(JSON.parse(json))
   })
-  it('headers', () => {
-    const markdown = `
-# Sample
-## Sample
-Hello **world** !
-    `.trim()
+  it('headers', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '02headers.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '02headers.json'), 'utf-8')
     const flexContainer = convert(markdown)
     // console.log(JSON.stringify(flexContainer, null, 2))
-
-    expect(flexContainer).toEqual({
-      type: "bubble",
-      body: {
-        type: "box",
-        layout: "vertical",
-        contents: [
-          {
-            type: "box",
-            layout: "vertical",
-            contents: [
-              {
-                type: "text",
-                text: "Sample",
-                weight: "bold",
-                size: "xl"
-              }
-            ],
-            paddingBottom: "xl"
-          },
-          {
-            type: "box",
-            layout: "vertical",
-            contents: [
-              {
-                type: "text",
-                text: "Sample",
-                weight: "bold",
-                size: "lg"
-              }
-            ],
-            paddingBottom: "lg"
-          },
-          {
-            type: "text",
-            text: "Hello **world** !"
-          }
-        ]
-      }
-    })
+    expect(flexContainer).toEqual(JSON.parse(json))
+  })
+  it('strong', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '03strong.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '03strong.json'), 'utf-8')
+    const flexContainer = convert(markdown)
+    // console.log(JSON.stringify(flexContainer, null, 2))
+    expect(flexContainer).toEqual(JSON.parse(json))
   })
 })

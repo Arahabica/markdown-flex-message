@@ -1,0 +1,45 @@
+{
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Sample",
+            "weight": "bold",
+            "size": "xl"
+          }
+        ],
+        "paddingBottom": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Sample",
+            "weight": "bold",
+            "size": "lg"
+          }
+        ],
+        "paddingBottom": "lg"
+      },
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "Hello"
+          }
+        ]
+      }
+    ]
+  }
+}

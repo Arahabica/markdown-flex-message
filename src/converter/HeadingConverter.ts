@@ -3,7 +3,7 @@ import { FlexComponent } from "@line/bot-sdk"
 import { FlexConverter } from "../types"
 
 export class HeadingConverter implements FlexConverter {
-  convert(token: Tokens.Heading | Tokens.Generic): FlexComponent {
+  convert(token: Tokens.Heading | Tokens.Generic): FlexComponent[] {
     const text = token.text
     let size = "md"
     let paddingBottom = "md"
@@ -15,7 +15,7 @@ export class HeadingConverter implements FlexConverter {
       size = "lg"
       paddingBottom = "lg"
     }
-    return {
+    const component: FlexComponent = {
       type: "box",
       layout: "vertical",
       contents: [
@@ -28,5 +28,6 @@ export class HeadingConverter implements FlexConverter {
       ],
       paddingBottom
     }
+    return [component]
   }
 }
