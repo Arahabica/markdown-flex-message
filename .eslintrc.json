@@ -1,0 +1,27 @@
+{
+  "env": {
+      "es2021": true,
+      "node": true, 
+      "browser": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+  },
+  "plugins": [
+      "@typescript-eslint"
+  ],
+  "rules": {
+      "@typescript-eslint/no-explicit-any": 1,
+      "@typescript-eslint/no-non-null-assertion": 1,
+      "indent": ["error", 2],
+      "semi": ["error", "never"]
+  },
+  "root": true
+}
