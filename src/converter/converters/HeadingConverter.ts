@@ -1,6 +1,6 @@
 import { Tokens } from "marked"
 import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../types"
+import { FlexConverter } from "../../types"
 
 export class HeadingConverter implements FlexConverter {
   convert(token: Tokens.Heading | Tokens.Generic): FlexComponent[] {

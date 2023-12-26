@@ -31,9 +31,23 @@ describe('convert', () => {
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))
   })
-  it('strong', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '03strong.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '03strong.json'), 'utf-8')
+  it('decorate', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '03decorate.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '03decorate.json'), 'utf-8')
+    const flexContainer = convert(markdown)
+    // console.log(JSON.stringify(flexContainer, null, 2))
+    expect(flexContainer).toEqual(JSON.parse(json))
+  })
+  it('code_with_lang', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '05code_with_lang.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '05code_with_lang.json'), 'utf-8')
+    const flexContainer = convert(markdown)
+    // console.log(JSON.stringify(flexContainer, null, 2))
+    expect(flexContainer).toEqual(JSON.parse(json))
+  })
+  it('code_with_no_lang', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '06_code_no_lang.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '06_code_no_lang.json'), 'utf-8')
     const flexContainer = convert(markdown)
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))

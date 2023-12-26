@@ -1,10 +1,15 @@
 import { Token } from "marked"
-import { GenericConverter } from "./GenericConverter"
-import { HeadingConverter } from "./HeadingConverter"
 import { FlexConverter } from "../types"
-import { ParagraphConverter } from "./PragraphConverter"
-import { StrongConverter } from "./StrongConverter"
-import { TextConverter } from "./TextConverter"
+import { GenericConverter } from "./converters/GenericConverter"
+import { HeadingConverter } from "./converters/HeadingConverter"
+import { CodeConverter } from "./converters/CodeConverter"
+import { ParagraphConverter } from "./converters/PragraphConverter"
+import { StrongConverter } from "./converters/StrongConverter"
+import { TextConverter } from "./converters/TextConverter"
+import { EmConverter } from "./converters/EmConverter"
+import { LinkConverter } from "./converters/LinkConverter"
+import { DelConverter } from "./converters/DelConverter"
+import { CodeSpanConverter } from "./converters/CodeSpanConverter"
 
 export class ConverterFactory {
   create(token: Token): FlexConverter {
@@ -12,10 +17,20 @@ export class ConverterFactory {
       return new ParagraphConverter()
     } else if (token.type === 'heading') {
       return new HeadingConverter()
+    } else if (token.type === 'code') {
+      return new CodeConverter()
     } else if (token.type === 'text') {
       return new TextConverter()
     } else if (token.type === 'strong') {
       return new StrongConverter()
+    } else if (token.type === 'em') {
+      return new EmConverter()
+    } else if (token.type === 'del') {
+      return new DelConverter()
+    } else if (token.type === 'codespan') {
+      return new CodeSpanConverter()
+    } else if (token.type === 'link') {
+      return new LinkConverter()
     } else {
       return new GenericConverter()
     }

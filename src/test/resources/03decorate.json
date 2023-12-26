@@ -1,0 +1,126 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "paddingAll": "xl",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Sample",
+            "weight": "bold",
+            "size": "xl"
+          }
+        ],
+        "paddingBottom": "xl"
+      },
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "Hello "
+          },
+          {
+            "type": "span",
+            "text": "world",
+            "weight": "bold"
+          },
+          {
+            "type": "span",
+            "text": " !\n"
+          },
+          {
+            "type": "span",
+            "text": "hello",
+            "style": "italic"
+          },
+          {
+            "type": "span",
+            "text": "\n"
+          },
+          {
+            "type": "span",
+            "text": "bold ",
+            "weight": "bold"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "https://link.com",
+        "decoration": "underline",
+        "color": "#0c93e4",
+        "action": {
+          "type": "uri",
+          "label": "https://link.com",
+          "uri": "https://link.com"
+        },
+        "weight": "bold"
+      },
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": " ",
+            "weight": "bold"
+          },
+          {
+            "type": "span",
+            "text": "italic",
+            "style": "italic",
+            "weight": "bold"
+          },
+          {
+            "type": "span",
+            "text": " ",
+            "weight": "bold"
+          },
+          {
+            "type": "span",
+            "text": "line-throw",
+            "decoration": "line-through",
+            "weight": "bold"
+          },
+          {
+            "type": "span",
+            "text": "\n"
+          },
+          {
+            "type": "span",
+            "text": "world",
+            "decoration": "line-through"
+          },
+          {
+            "type": "span",
+            "text": " "
+          },
+          {
+            "type": "span",
+            "text": "`code`",
+            "weight": "bold",
+            "size": "sm"
+          },
+          {
+            "type": "span",
+            "text": " "
+          },
+          {
+            "type": "span",
+            "text": "`codeeee`",
+            "weight": "bold",
+            "size": "sm"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 import { Token, Tokens } from "marked"
 import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../types"
-import { MainConverter } from "./MainConverter"
+import { FlexConverter } from "../../types"
+import { MainConverter } from "../MainConverter"
 
 export class ParagraphConverter implements FlexConverter {
   convert(token: Tokens.Paragraph): FlexComponent[] {
@@ -10,25 +10,28 @@ export class ParagraphConverter implements FlexConverter {
     token.tokens.forEach(childToken => {
       const childComponents = mainConverter.convert(childToken)
       if (this.isInline(childToken)) {
-        if (components.length === 0 || !this.isTextWithContents(components[components.length - 1])) {
-          components.push({
-            type: "text",
-            wrap: true,
-            contents: []
-          })
-        }
-        if (components.length === 0) {
-          throw new Error("components.length === 0")
-        }
-        const block = components[components.length - 1]
-        if (block.type !== "text" || block.text || !block.contents) {
-          throw new Error("block.type !== 'text' || block.text || !block.contents")
-        }
         childComponents.forEach(component => {
-          if (component.type !== "span") {
-            throw new Error("component.type !== 'span'")
+          if (component.type === "span") {
+            if (components.length === 0 || !this.isTextWithContents(components[components.length - 1])) {
+              components.push({
+                type: "text",
+                wrap: true,
+                contents: []
+              })
+            }
+            // Type Guard for avoiding type error
+            if (components.length === 0) {
+              throw new Error("components.length === 0")
+            }
+            const block = components[components.length - 1]
+            // Type Guard for avoiding type error
+            if (block.type !== "text" || block.text || !block.contents) {
+              throw new Error("block.type !== 'text' || block.text || !block.contents")
+            }
+            block.contents.push(component)
+          } else {
+            components.push(component)
           }
-          block.contents.push(component)
         })
       } else {
         childComponents.forEach(component => {
@@ -47,12 +50,8 @@ export class ParagraphConverter implements FlexConverter {
       "strong",
       "em",
       "codespan",
-      // "br",
       "del",
-      "link",
-      // "image",
       "text",
-      // "html",
     ]
     return inlineTypes.includes(token.type)
   }
