@@ -1,6 +1,6 @@
 import { MainConverter } from "./converter/MainConverter"
 import { MarkDownParser } from "./parser/MarkDownParser"
-import { FlexContainer } from "@line/bot-sdk"
+import { FlexBubble, FlexMessage } from "@line/bot-sdk"
 import { FlexConverter } from "./types"
 
 export type ConvertOptions = {
@@ -15,8 +15,20 @@ export class Larkdown {
     this.parser = new MarkDownParser()
     this.converter = new MainConverter()
   }
-  convert(markdown: string, options: ConvertOptions = {}): FlexContainer {
-    const flex: FlexContainer = {
+  convertToFlexMessage(
+    markdown: string,
+    altText: string,
+    options: ConvertOptions = {}
+  ): FlexMessage {
+    const contents: FlexBubble = this.convertToFlexBubble(markdown, options)
+    return {
+      type: "flex",
+      altText,
+      contents
+    }
+  }
+  convertToFlexBubble(markdown: string, options: ConvertOptions = {}): FlexBubble {
+    const flex: FlexBubble = {
       type: "bubble",
       size: this.getRootSize(options),
       body: {
@@ -46,7 +58,16 @@ export class Larkdown {
   }
 }
 
-export const convert = (markdown: string): FlexContainer => {
+export const convertToFlexMessage = (
+  markdown: string,
+  altText: string,
+  options: ConvertOptions = {}
+): FlexMessage => {
   const larkdown = new Larkdown()
-  return larkdown.convert(markdown)
+  return larkdown.convertToFlexMessage(markdown, altText, options)
+}
+
+export const convertToFlexBubble = (markdown: string, options: ConvertOptions = {}): FlexBubble => {
+  const larkdown = new Larkdown()
+  return larkdown.convertToFlexBubble(markdown, options)
 }
