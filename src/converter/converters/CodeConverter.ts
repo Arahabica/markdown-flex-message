@@ -33,7 +33,6 @@ export class CodeConverter implements FlexConverter {
           text,
           size: "xs",
           wrap: true,
-          margin: "sm",
           color: this.codeTextColor,
         }
       ]

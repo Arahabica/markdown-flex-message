@@ -1,0 +1,206 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "paddingAll": "xl",
+    "contents": [
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "宮沢賢治全集　第7巻 ポラーノの広場"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "backgroundColor": "#dadadf",
+        "margin": "md",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "width": "4px",
+            "contents": []
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingTop": "4px",
+            "paddingBottom": "4px",
+            "paddingStart": "8px",
+            "backgroundColor": "#ffffff",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "あのイーハトーヴォのすきとほった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "引用多段テスト"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "backgroundColor": "#dadadf",
+        "margin": "md",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "width": "4px",
+            "contents": []
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingTop": "4px",
+            "paddingBottom": "4px",
+            "paddingStart": "8px",
+            "backgroundColor": "#ffffff",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "あのイーハトーヴォのすきとほった風、夏でも底に冷たさをもつ青いそら\nうつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波\nまたそのなかでいっしょになったたくさんのひとたち"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "\n\n",
+        "wrap": true
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "backgroundColor": "#dadadf",
+        "margin": "md",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "width": "4px",
+            "contents": []
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingTop": "4px",
+            "paddingBottom": "4px",
+            "paddingStart": "8px",
+            "backgroundColor": "#ffffff",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "あのイーハトーヴォのすきとほった風、夏でも底に冷たさをもつ青いそら"
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "backgroundColor": "#dadadf",
+                "margin": "md",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "width": "4px",
+                    "contents": []
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "paddingTop": "4px",
+                    "paddingBottom": "4px",
+                    "paddingStart": "8px",
+                    "backgroundColor": "#ffffff",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "wrap": true,
+                        "contents": [
+                          {
+                            "type": "span",
+                            "text": "うつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "horizontal",
+                        "backgroundColor": "#dadadf",
+                        "margin": "md",
+                        "contents": [
+                          {
+                            "type": "box",
+                            "layout": "vertical",
+                            "width": "4px",
+                            "contents": []
+                          },
+                          {
+                            "type": "box",
+                            "layout": "vertical",
+                            "paddingTop": "4px",
+                            "paddingBottom": "4px",
+                            "paddingStart": "8px",
+                            "backgroundColor": "#ffffff",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "wrap": true,
+                                "contents": [
+                                  {
+                                    "type": "span",
+                                    "text": "またそのなかでいっしょになったたくさんのひとたち"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

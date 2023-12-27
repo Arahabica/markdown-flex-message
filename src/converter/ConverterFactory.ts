@@ -10,6 +10,7 @@ import { EmConverter } from "./converters/EmConverter"
 import { LinkConverter } from "./converters/LinkConverter"
 import { DelConverter } from "./converters/DelConverter"
 import { CodeSpanConverter } from "./converters/CodeSpanConverter"
+import { BlockquoteConverter } from "./converters/BlockquotesConverter"
 
 export class ConverterFactory {
   create(token: Token): FlexConverter {
@@ -19,6 +20,8 @@ export class ConverterFactory {
       return new HeadingConverter()
     } else if (token.type === 'code') {
       return new CodeConverter()
+    } else if (token.type === 'blockquote') {
+      return new BlockquoteConverter()
     } else if (token.type === 'text') {
       return new TextConverter()
     } else if (token.type === 'strong') {

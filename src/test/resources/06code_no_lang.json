@@ -47,7 +47,6 @@
                 "text": "// Person.java\npublic class Person {\n   private String name;\n   private int age;\n\n   public Person(String name, int age) {\n       this.name = name;\n       this.age = age;\n   }\n\n   public String getName() {\n       return name;\n   }\n\n   public int getAge() {\n       return age;\n   }\n}\n\n// Main.java\npublic class Main {\n   public static void main(String[] args) {\n       Person person = new Person(\"John Doe\", 30);\n       System.out.println(\"Name: \" + person.getName());\n       System.out.println(\"Age: \" + person.getAge());\n   }\n}",
                 "size": "xs",
                 "wrap": true,
-                "margin": "sm",
                 "color": "#ffffff"
               }
             ]

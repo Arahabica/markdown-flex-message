@@ -46,8 +46,15 @@ describe('convert', () => {
     expect(flexContainer).toEqual(JSON.parse(json))
   })
   it('code_with_no_lang', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '06_code_no_lang.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '06_code_no_lang.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(join(dir, '06code_no_lang.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '06code_no_lang.json'), 'utf-8')
+    const flexContainer = convertToFlexBubble(markdown)
+    // console.log(JSON.stringify(flexContainer, null, 2))
+    expect(flexContainer).toEqual(JSON.parse(json))
+  })
+  it('blockquote', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
     const flexContainer = convertToFlexBubble(markdown)
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))
