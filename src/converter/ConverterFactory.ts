@@ -11,6 +11,7 @@ import { LinkConverter } from "./converters/LinkConverter"
 import { DelConverter } from "./converters/DelConverter"
 import { CodeSpanConverter } from "./converters/CodeSpanConverter"
 import { BlockquoteConverter } from "./converters/BlockquotesConverter"
+import { ListConverter } from "./converters/ListConverter"
 
 export class ConverterFactory {
   create(token: Token): FlexConverter {
@@ -22,6 +23,8 @@ export class ConverterFactory {
       return new CodeConverter()
     } else if (token.type === 'blockquote') {
       return new BlockquoteConverter()
+    } else if (token.type === 'list') {
+      return new ListConverter()
     } else if (token.type === 'text') {
       return new TextConverter()
     } else if (token.type === 'strong') {
