@@ -4,8 +4,8 @@ import { FlexConverter } from "../../types"
 import { InlineConverter } from "./InlineConverter"
 
 export class ListConverter implements FlexConverter {
-  private readonly dotColor = "#abafb9"
-  private readonly dotRadius = 3
+  private readonly markerColor = "#666979"
+  private readonly dotRadius = 2
   private readonly inlineConverter: InlineConverter
 
   constructor() {
@@ -15,12 +15,12 @@ export class ListConverter implements FlexConverter {
     const components:FlexComponent[] = []
     token.items.forEach(item => {
       const contents = this.inlineConverter.convert(item.tokens)
-      const dot: FlexComponent = {
+      const marker: FlexComponent = {
         type: 'box',
         layout: 'vertical',
-        width: `${this.dotRadius}px`,
-        height: `${this.dotRadius}px`,
-        backgroundColor: this.dotColor,
+        width: `${this.dotRadius * 2}px`,
+        height: `${this.dotRadius * 2}px`,
+        backgroundColor: this.markerColor,
         cornerRadius: `${this.dotRadius}px`,
         offsetTop: '12px',
         offsetStart: '4px',
@@ -30,7 +30,7 @@ export class ListConverter implements FlexConverter {
         type: 'box',
         layout: 'horizontal',
         contents: [
-          dot,
+          marker,
           {
             type: 'box',
             layout: 'vertical',

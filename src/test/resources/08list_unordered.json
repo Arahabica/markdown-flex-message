@@ -23,10 +23,10 @@
           {
             "type": "box",
             "layout": "vertical",
-            "width": "3px",
-            "height": "3px",
-            "backgroundColor": "#abafb9",
-            "cornerRadius": "3px",
+            "width": "4px",
+            "height": "4px",
+            "backgroundColor": "#666979",
+            "cornerRadius": "2px",
             "offsetTop": "12px",
             "offsetStart": "4px",
             "contents": []
@@ -72,10 +72,10 @@
           {
             "type": "box",
             "layout": "vertical",
-            "width": "3px",
-            "height": "3px",
-            "backgroundColor": "#abafb9",
-            "cornerRadius": "3px",
+            "width": "4px",
+            "height": "4px",
+            "backgroundColor": "#666979",
+            "cornerRadius": "2px",
             "offsetTop": "12px",
             "offsetStart": "4px",
             "contents": []
@@ -106,10 +106,10 @@
           {
             "type": "box",
             "layout": "vertical",
-            "width": "3px",
-            "height": "3px",
-            "backgroundColor": "#abafb9",
-            "cornerRadius": "3px",
+            "width": "4px",
+            "height": "4px",
+            "backgroundColor": "#666979",
+            "cornerRadius": "2px",
             "offsetTop": "12px",
             "offsetStart": "4px",
             "contents": []
@@ -136,10 +136,10 @@
                   {
                     "type": "box",
                     "layout": "vertical",
-                    "width": "3px",
-                    "height": "3px",
-                    "backgroundColor": "#abafb9",
-                    "cornerRadius": "3px",
+                    "width": "4px",
+                    "height": "4px",
+                    "backgroundColor": "#666979",
+                    "cornerRadius": "2px",
                     "offsetTop": "12px",
                     "offsetStart": "4px",
                     "contents": []
@@ -170,10 +170,10 @@
                   {
                     "type": "box",
                     "layout": "vertical",
-                    "width": "3px",
-                    "height": "3px",
-                    "backgroundColor": "#abafb9",
-                    "cornerRadius": "3px",
+                    "width": "4px",
+                    "height": "4px",
+                    "backgroundColor": "#666979",
+                    "cornerRadius": "2px",
                     "offsetTop": "12px",
                     "offsetStart": "4px",
                     "contents": []
@@ -200,10 +200,10 @@
                           {
                             "type": "box",
                             "layout": "vertical",
-                            "width": "3px",
-                            "height": "3px",
-                            "backgroundColor": "#abafb9",
-                            "cornerRadius": "3px",
+                            "width": "4px",
+                            "height": "4px",
+                            "backgroundColor": "#666979",
+                            "cornerRadius": "2px",
                             "offsetTop": "12px",
                             "offsetStart": "4px",
                             "contents": []
@@ -242,10 +242,10 @@
           {
             "type": "box",
             "layout": "vertical",
-            "width": "3px",
-            "height": "3px",
-            "backgroundColor": "#abafb9",
-            "cornerRadius": "3px",
+            "width": "4px",
+            "height": "4px",
+            "backgroundColor": "#666979",
+            "cornerRadius": "2px",
             "offsetTop": "12px",
             "offsetStart": "4px",
             "contents": []
@@ -276,10 +276,10 @@
           {
             "type": "box",
             "layout": "vertical",
-            "width": "3px",
-            "height": "3px",
-            "backgroundColor": "#abafb9",
-            "cornerRadius": "3px",
+            "width": "4px",
+            "height": "4px",
+            "backgroundColor": "#666979",
+            "cornerRadius": "2px",
             "offsetTop": "12px",
             "offsetStart": "4px",
             "contents": []
@@ -311,10 +311,10 @@
                   {
                     "type": "box",
                     "layout": "vertical",
-                    "width": "3px",
-                    "height": "3px",
-                    "backgroundColor": "#abafb9",
-                    "cornerRadius": "3px",
+                    "width": "4px",
+                    "height": "4px",
+                    "backgroundColor": "#666979",
+                    "cornerRadius": "2px",
                     "offsetTop": "12px",
                     "offsetStart": "4px",
                     "contents": []
@@ -341,10 +341,10 @@
                           {
                             "type": "box",
                             "layout": "vertical",
-                            "width": "3px",
-                            "height": "3px",
-                            "backgroundColor": "#abafb9",
-                            "cornerRadius": "3px",
+                            "width": "4px",
+                            "height": "4px",
+                            "backgroundColor": "#666979",
+                            "cornerRadius": "2px",
                             "offsetTop": "12px",
                             "offsetStart": "4px",
                             "contents": []
@@ -371,10 +371,10 @@
                                   {
                                     "type": "box",
                                     "layout": "vertical",
-                                    "width": "3px",
-                                    "height": "3px",
-                                    "backgroundColor": "#abafb9",
-                                    "cornerRadius": "3px",
+                                    "width": "4px",
+                                    "height": "4px",
+                                    "backgroundColor": "#666979",
+                                    "cornerRadius": "2px",
                                     "offsetTop": "12px",
                                     "offsetStart": "4px",
                                     "contents": []
@@ -417,10 +417,10 @@
           {
             "type": "box",
             "layout": "vertical",
-            "width": "3px",
-            "height": "3px",
-            "backgroundColor": "#abafb9",
-            "cornerRadius": "3px",
+            "width": "4px",
+            "height": "4px",
+            "backgroundColor": "#666979",
+            "cornerRadius": "2px",
             "offsetTop": "12px",
             "offsetStart": "4px",
             "contents": []
