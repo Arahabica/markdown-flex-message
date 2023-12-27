@@ -4,7 +4,9 @@ import { FlexConverter } from "../../types"
 import { MainConverter } from "../MainConverter"
 
 export class BlockquoteConverter implements FlexConverter {
-  private readonly color = "#dadadf"
+  private readonly borderColor = "#abafb9"
+  private readonly textColor = "#666979"
+  private readonly borderWidth = "3px"
 
   convert(token: Tokens.Blockquote): FlexComponent[] {
     const mainConverter = new MainConverter()
@@ -13,16 +15,21 @@ export class BlockquoteConverter implements FlexConverter {
       const contents = mainConverter.convert(childToken)
       childContents.push(...contents)
     })
+    childContents.forEach(content => {
+      if (content.type === 'text' && content.color === undefined) {
+        content.color = this.textColor
+      }
+    })
     const component: FlexComponent = {
       type: 'box',
       layout: 'horizontal',
-      backgroundColor: this.color,
+      backgroundColor: this.borderColor,
       margin: 'md',
       contents: [
         {
           type: 'box',
           layout: 'vertical',
-          width: '4px',
+          width: this.borderWidth,
           contents: []
         },
         {

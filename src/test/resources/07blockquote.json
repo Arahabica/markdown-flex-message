@@ -19,13 +19,13 @@
       {
         "type": "box",
         "layout": "horizontal",
-        "backgroundColor": "#dadadf",
+        "backgroundColor": "#abafb9",
         "margin": "md",
         "contents": [
           {
             "type": "box",
             "layout": "vertical",
-            "width": "4px",
+            "width": "3px",
             "contents": []
           },
           {
@@ -44,7 +44,8 @@
                     "type": "span",
                     "text": "あのイーハトーヴォのすきとほった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波"
                   }
-                ]
+                ],
+                "color": "#666979"
               }
             ]
           }
@@ -63,13 +64,13 @@
       {
         "type": "box",
         "layout": "horizontal",
-        "backgroundColor": "#dadadf",
+        "backgroundColor": "#abafb9",
         "margin": "md",
         "contents": [
           {
             "type": "box",
             "layout": "vertical",
-            "width": "4px",
+            "width": "3px",
             "contents": []
           },
           {
@@ -88,7 +89,8 @@
                     "type": "span",
                     "text": "あのイーハトーヴォのすきとほった風、夏でも底に冷たさをもつ青いそら\nうつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波\nまたそのなかでいっしょになったたくさんのひとたち"
                   }
-                ]
+                ],
+                "color": "#666979"
               }
             ]
           }
@@ -102,13 +104,13 @@
       {
         "type": "box",
         "layout": "horizontal",
-        "backgroundColor": "#dadadf",
+        "backgroundColor": "#abafb9",
         "margin": "md",
         "contents": [
           {
             "type": "box",
             "layout": "vertical",
-            "width": "4px",
+            "width": "3px",
             "contents": []
           },
           {
@@ -127,18 +129,19 @@
                     "type": "span",
                     "text": "あのイーハトーヴォのすきとほった風、夏でも底に冷たさをもつ青いそら"
                   }
-                ]
+                ],
+                "color": "#666979"
               },
               {
                 "type": "box",
                 "layout": "horizontal",
-                "backgroundColor": "#dadadf",
+                "backgroundColor": "#abafb9",
                 "margin": "md",
                 "contents": [
                   {
                     "type": "box",
                     "layout": "vertical",
-                    "width": "4px",
+                    "width": "3px",
                     "contents": []
                   },
                   {
@@ -157,18 +160,19 @@
                             "type": "span",
                             "text": "うつくしい森で飾られたモーリオ市、郊外のぎらぎらひかる草の波"
                           }
-                        ]
+                        ],
+                        "color": "#666979"
                       },
                       {
                         "type": "box",
                         "layout": "horizontal",
-                        "backgroundColor": "#dadadf",
+                        "backgroundColor": "#abafb9",
                         "margin": "md",
                         "contents": [
                           {
                             "type": "box",
                             "layout": "vertical",
-                            "width": "4px",
+                            "width": "3px",
                             "contents": []
                           },
                           {
@@ -187,7 +191,8 @@
                                     "type": "span",
                                     "text": "またそのなかでいっしょになったたくさんのひとたち"
                                   }
-                                ]
+                                ],
+                                "color": "#666979"
                               }
                             ]
                           }
