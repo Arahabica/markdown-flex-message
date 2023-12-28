@@ -22,6 +22,7 @@
     "vitest": "^1.1.0"
   },
   "dependencies": {
+    "image-size": "^1.0.2",
     "marked": "^11.1.0"
   }
 }
