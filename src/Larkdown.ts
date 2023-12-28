@@ -43,7 +43,8 @@ export class Larkdown {
     result.forEach((token) => {
       const contents = this.converter.convert(token)
       contents.forEach((content) => {
-        flex.body?.contents.push(content)
+        const simplifiedContent = JSON.parse(JSON.stringify(content))
+        flex.body?.contents.push(simplifiedContent)
       })
     })
     return flex

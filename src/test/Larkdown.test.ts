@@ -59,9 +59,16 @@ describe('convert', () => {
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))
   })
-  it('list', async () => {
+  it('list_unordered', async () => {
     const markdown = await fsPromises.readFile(join(dir, '08list_unordered.md'), 'utf-8')
     const json = await fsPromises.readFile(join(dir, '08list_unordered.json'), 'utf-8')
+    const flexContainer = convertToFlexBubble(markdown)
+    // console.log(JSON.stringify(flexContainer, null, 2))
+    expect(flexContainer).toEqual(JSON.parse(json))
+  })
+  it('list_ordered', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '09list_ordered.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '09list_ordered.json'), 'utf-8')
     const flexContainer = convertToFlexBubble(markdown)
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))
