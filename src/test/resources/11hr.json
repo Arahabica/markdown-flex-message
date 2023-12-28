@@ -1,0 +1,57 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "paddingAll": "xl",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Hello",
+            "weight": "bold",
+            "size": "xl"
+          }
+        ],
+        "paddingBottom": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "16px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "backgroundColor": "#e3e5ed",
+            "width": "100%",
+            "height": "2px",
+            "cornerRadius": "1px",
+            "contents": []
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "width": "100%",
+            "height": "16px",
+            "contents": []
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "world"
+          }
+        ]
+      }
+    ]
+  }
+}

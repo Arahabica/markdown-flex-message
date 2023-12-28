@@ -12,6 +12,7 @@ import { DelConverter } from "./converters/DelConverter"
 import { CodeSpanConverter } from "./converters/CodeSpanConverter"
 import { BlockquoteConverter } from "./converters/BlockquotesConverter"
 import { ListConverter } from "./converters/ListConverter"
+import { HrConverter } from "./converters/HrConverter"
 
 export class ConverterFactory {
   create(token: Token): FlexConverter {
@@ -37,6 +38,8 @@ export class ConverterFactory {
       return new CodeSpanConverter()
     } else if (token.type === 'link') {
       return new LinkConverter()
+    } else if (token.type === 'hr') {
+      return new HrConverter()
     } else {
       return new GenericConverter()
     }
