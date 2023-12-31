@@ -11,11 +11,13 @@ export class ListConverter implements FlexConverter {
   constructor() {
     this.inlineConverter = new InlineConverter()
   }
-  convert(token: Tokens.List): FlexComponent[] {
+  async convert(token: Tokens.List): Promise<FlexComponent[]> {
     const components: FlexComponent[] = []
     const marginLeft = this.calculateMarginLeft(token)
-    token.items.forEach((item, index) => {
-      const contents = this.inlineConverter.convert(item.tokens)
+    // token.items.forEach((item, index) => {
+    let index = 0
+    for (const item of token.items) {
+      const contents = await this.inlineConverter.convert(item.tokens)
       const marker = this.generateMarker(token, index)
       const margin = index === 0 ? 'md' : undefined
       components.push({
@@ -32,7 +34,8 @@ export class ListConverter implements FlexConverter {
           }
         ]
       })
-    })
+      index++
+    }
     return components
   }
   private generateMarker(token: Tokens.List, index: number): FlexComponent {

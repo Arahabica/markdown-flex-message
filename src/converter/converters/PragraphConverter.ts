@@ -9,7 +9,7 @@ export class ParagraphConverter implements FlexConverter {
   constructor() {
     this.inlineConverter = new InlineConverter()
   }
-  convert(token: Tokens.Paragraph): FlexComponent[] {
+  async convert(token: Tokens.Paragraph): Promise<FlexComponent[]> {
     return this.inlineConverter.convert(token.tokens)
   }
 }

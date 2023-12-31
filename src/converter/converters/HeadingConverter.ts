@@ -3,17 +3,17 @@ import { FlexComponent } from "@line/bot-sdk"
 import { FlexConverter } from "../../types"
 
 export class HeadingConverter implements FlexConverter {
-  convert(token: Tokens.Heading | Tokens.Generic): FlexComponent[] {
+  async convert(token: Tokens.Heading | Tokens.Generic): Promise<FlexComponent[]> {
     const text = token.text
     let size = "md"
-    let paddingBottom = "md"
+    let paddingBottom = "sm"
     if (token.depth === 1) {
       size = "xl"
-      paddingBottom = "xl"
+      paddingBottom = "lg"
     }
     else if (token.depth === 2) {
       size = "lg"
-      paddingBottom = "lg"
+      paddingBottom = "md"
     }
     const component: FlexComponent = {
       type: "box",

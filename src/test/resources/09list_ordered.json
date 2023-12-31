@@ -4,6 +4,7 @@
   "body": {
     "type": "box",
     "layout": "vertical",
+    "spacing": "md",
     "paddingAll": "xl",
     "contents": [
       {
@@ -128,11 +129,6 @@
                     "text": "bar\nbbbb\ncccc"
                   }
                 ]
-              },
-              {
-                "type": "text",
-                "text": "\n\n",
-                "wrap": true
               },
               {
                 "type": "box",

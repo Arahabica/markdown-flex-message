@@ -8,7 +8,7 @@ export class CodeConverter implements FlexConverter {
   private readonly codeBackgroundColor = "#18212c"
   private readonly codeTextColor = "#ffffff"
 
-  convert(token: Tokens.Code): FlexComponent[] {
+  async convert(token: Tokens.Code): Promise<FlexComponent[]> {
     const component: FlexComponent = {
       type: "box",
       layout: "vertical",

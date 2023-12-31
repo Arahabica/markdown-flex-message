@@ -8,7 +8,7 @@ export class HrConverter implements FlexConverter {
   private readonly margin = 16
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  convert(_: Tokens.Hr): FlexComponent[] {
+  async convert(_: Tokens.Hr): Promise<FlexComponent[]> {
     const { borderColor, borderHeight, margin } = this
     const component: FlexComponent = {
       type: 'box',

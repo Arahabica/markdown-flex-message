@@ -8,7 +8,7 @@ export class MainConverter implements FlexConverter {
   constructor() {
     this.factory = new ConverterFactory()
   }
-  convert(token: Token): FlexComponent[] {
+  async convert(token: Token): Promise<FlexComponent[]> {
     const converter = this.factory.create(token)
     return converter.convert(token)
   }

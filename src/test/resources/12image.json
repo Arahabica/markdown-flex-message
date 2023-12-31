@@ -1,0 +1,38 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "paddingAll": "xl",
+    "contents": [
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "Hello"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=Larkdown",
+        "aspectRatio": "4:1",
+        "size": "full"
+      },
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "hey"
+          }
+        ]
+      }
+    ]
+  }
+}

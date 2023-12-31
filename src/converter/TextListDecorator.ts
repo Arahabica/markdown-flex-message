@@ -4,7 +4,7 @@ import { FlexComponent, FlexSpan } from "@line/bot-sdk"
 import { DecoratableFlex } from "../types"
 
 export class TextListDecorator {
-  decorate(token: Tokens.Strong | Tokens.Generic, decorate: (span: DecoratableFlex) => void): FlexComponent[] {
+  async decorate(token: Tokens.Strong | Tokens.Generic, decorate: (span: DecoratableFlex) => void): Promise<FlexComponent[]> {
     const mainConverter = new MainConverter()
     if (!token.tokens) {
       const text = token.text
@@ -16,8 +16,9 @@ export class TextListDecorator {
       return [span]
     }
     const components: FlexComponent[] = []
-    token.tokens.forEach(token => {
-      const childComponents = mainConverter.convert(token)
+    // token.tokens.forEach(token => {
+    for (const childToken of token.tokens) {
+      const childComponents = await mainConverter.convert(childToken)
       childComponents.forEach(component => {
         if (component.type === "span" || component.type === "text") {
           decorate(component)
@@ -30,7 +31,7 @@ export class TextListDecorator {
         }
         components.push(component)
       })
-    })
+    }
     return components
   }
 }

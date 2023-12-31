@@ -15,19 +15,19 @@ export class Larkdown {
     this.parser = new MarkDownParser()
     this.converter = new MainConverter()
   }
-  convertToFlexMessage(
+  async convertToFlexMessage(
     markdown: string,
     altText: string,
     options: ConvertOptions = {}
-  ): FlexMessage {
-    const contents: FlexBubble = this.convertToFlexBubble(markdown, options)
+  ): Promise<FlexMessage> {
+    const contents: FlexBubble = await this.convertToFlexBubble(markdown, options)
     return {
       type: "flex",
       altText,
       contents
     }
   }
-  convertToFlexBubble(markdown: string, options: ConvertOptions = {}): FlexBubble {
+  async convertToFlexBubble(markdown: string, options: ConvertOptions = {}): Promise<FlexBubble> {
     const flex: FlexBubble = {
       type: "bubble",
       size: this.getRootSize(options),
@@ -35,18 +35,21 @@ export class Larkdown {
         type: "box",
         layout: "vertical",
         paddingAll: "xl",
+        spacing: "md",
         contents: []
       }
     }
     const result = this.parser.parse(markdown)
     // console.log(JSON.stringify(result, null, 2))
-    result.forEach((token) => {
-      const contents = this.converter.convert(token)
-      contents.forEach((content) => {
+    //result.forEach((token) => {
+    for (const token of result) {
+      const contents = await this.converter.convert(token)
+      // contents.forEach((content) => {
+      for(const content of contents) {
         const simplifiedContent = JSON.parse(JSON.stringify(content))
         flex.body?.contents.push(simplifiedContent)
-      })
-    })
+      }
+    }
     return flex
   }
   private getRootSize(options: ConvertOptions): "nano" | "micro" | "kilo" | "giga" | undefined {
@@ -63,12 +66,12 @@ export const convertToFlexMessage = (
   markdown: string,
   altText: string,
   options: ConvertOptions = {}
-): FlexMessage => {
+): Promise<FlexMessage> => {
   const larkdown = new Larkdown()
   return larkdown.convertToFlexMessage(markdown, altText, options)
 }
 
-export const convertToFlexBubble = (markdown: string, options: ConvertOptions = {}): FlexBubble => {
+export const convertToFlexBubble = (markdown: string, options: ConvertOptions = {}): Promise<FlexBubble> => {
   const larkdown = new Larkdown()
   return larkdown.convertToFlexBubble(markdown, options)
 }

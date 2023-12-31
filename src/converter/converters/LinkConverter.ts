@@ -3,7 +3,7 @@ import { FlexComponent } from "@line/bot-sdk"
 import { FlexConverter } from "../../types"
 
 export class LinkConverter implements FlexConverter {
-  convert(token: Tokens.Link): FlexComponent[] {
+  async convert(token: Tokens.Link): Promise<FlexComponent[]> {
     const { href, text } = token
     return [{
       type: 'text',

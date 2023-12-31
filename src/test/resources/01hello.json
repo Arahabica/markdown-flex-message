@@ -5,6 +5,7 @@
     "type": "box",
     "layout": "vertical",
     "paddingAll": "xl",
+    "spacing": "md",
     "contents": [
       {
         "type": "text",

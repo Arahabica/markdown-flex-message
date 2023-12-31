@@ -4,6 +4,7 @@
   "body": {
     "type": "box",
     "layout": "vertical",
+    "spacing": "md",
     "paddingAll": "xl",
     "contents": [
       {
@@ -17,7 +18,7 @@
             "size": "xl"
           }
         ],
-        "paddingBottom": "xl"
+        "paddingBottom": "lg"
       },
       {
         "type": "box",

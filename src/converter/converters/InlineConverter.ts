@@ -3,11 +3,11 @@ import { FlexComponent } from "@line/bot-sdk"
 import { MainConverter } from "../MainConverter"
 
 export class InlineConverter {
-  convert(tokens: Token[]): FlexComponent[] {
+  async convert(tokens: Token[]): Promise<FlexComponent[]> {
     const mainConverter = new MainConverter()
     const components: FlexComponent[] = []
-    tokens.forEach(childToken => {
-      const childComponents = mainConverter.convert(childToken)
+    for(const childToken of tokens) {
+      const childComponents = await mainConverter.convert(childToken)
       if (this.isInline(childToken)) {
         childComponents.forEach(component => {
           if (component.type === "span") {
@@ -27,6 +27,10 @@ export class InlineConverter {
             if (block.type !== "text" || block.text || !block.contents) {
               throw new Error("block.type !== 'text' || block.text || !block.contents")
             }
+            // Prevent extra line breaks
+            if (block.contents.length === 0) {
+              component.text = component.text.replace(/^\n/, "")
+            }
             block.contents.push(component)
           } else {
             components.push(component)
@@ -37,7 +41,7 @@ export class InlineConverter {
           components.push(component)
         })
       }
-    })
+    }
     return components
   }
   private isTextWithContents(component: FlexComponent): boolean {

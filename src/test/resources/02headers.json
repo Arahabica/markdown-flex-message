@@ -5,6 +5,7 @@
     "type": "box",
     "layout": "vertical",
     "paddingAll": "xl",
+    "spacing": "md",
     "contents": [
       {
         "type": "box",
@@ -17,7 +18,7 @@
             "size": "xl"
           }
         ],
-        "paddingBottom": "xl"
+        "paddingBottom": "lg"
       },
       {
         "type": "box",
@@ -30,7 +31,7 @@
             "size": "lg"
           }
         ],
-        "paddingBottom": "lg"
+        "paddingBottom": "md"
       },
       {
         "type": "text",

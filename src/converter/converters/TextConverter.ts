@@ -4,14 +4,16 @@ import { FlexConverter } from "../../types"
 import { MainConverter } from "../MainConverter"
 
 export class TextConverter implements FlexConverter {
-  convert(token: Tokens.Text): FlexComponent[] {
+  async convert(token: Tokens.Text): Promise<FlexComponent[]> {
     if (token.tokens) {
-      return token.tokens.map(childToken => {
+      const promises = token.tokens.map(childToken => {
         const mainConverter = new MainConverter()
         return mainConverter.convert(childToken)
-      }).reduce((a, b) => a.concat(b), [])
+      })
+      const groups = await Promise.all(promises)
+      return groups.reduce((a, b) => a.concat(b), [])
     }
-    const text = token.raw
+    const text = token.raw.replace(/\n\n$/, '\n')
     return [{
       type: 'span',
       text,

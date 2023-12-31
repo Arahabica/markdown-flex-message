@@ -8,13 +8,13 @@ export class BlockquoteConverter implements FlexConverter {
   private readonly textColor = "#666979"
   private readonly borderWidth = "3px"
 
-  convert(token: Tokens.Blockquote): FlexComponent[] {
+  async convert(token: Tokens.Blockquote): Promise<FlexComponent[]> {
     const mainConverter = new MainConverter()
     const childContents: FlexComponent[] = []
-    token.tokens.forEach(childToken => {
-      const contents = mainConverter.convert(childToken)
+    for(const childToken of token.tokens) {
+      const contents = await mainConverter.convert(childToken)
       childContents.push(...contents)
-    })
+    }
     childContents.forEach(content => {
       if (content.type === 'text' && content.color === undefined) {
         content.color = this.textColor

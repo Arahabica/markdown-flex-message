@@ -4,6 +4,7 @@
   "body": {
     "type": "box",
     "layout": "vertical",
+    "spacing": "md", 
     "paddingAll": "xl",
     "contents": [
       {
@@ -25,11 +26,6 @@
             "text": " というファイルを作ります。"
           }
         ]
-      },
-      {
-        "type": "text",
-        "text": "\n\n",
-        "wrap": true
       },
       {
         "type": "box",

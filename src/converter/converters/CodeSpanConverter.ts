@@ -8,7 +8,7 @@ export class CodeSpanConverter implements FlexConverter {
   constructor() {
     this.decorator = new TextListDecorator()
   }
-  convert(token: Tokens.Em | Tokens.Generic): FlexComponent[] {
+  async convert(token: Tokens.Em | Tokens.Generic): Promise<FlexComponent[]> {
     return this.decorator.decorate(token, this.decorate)
   }
   private decorate(span: DecoratableFlex): void {

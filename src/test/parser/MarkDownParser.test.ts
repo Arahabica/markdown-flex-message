@@ -106,12 +106,12 @@ hello **World**!
         }
       ])
     })
-    // it('main', async () => {
-    //   const parser = new MarkDownParser()
-    //   const markdownPath = join(__dirname, '../resources/08list_unordered.md')
-    //   const markdown = await fsPromises.readFile(markdownPath, 'utf-8')
-    //   const tokens = parser.parse(markdown)
-    //   console.log(JSON.stringify(tokens, null, 2))
-    // })
+    it('main', async () => {
+      const parser = new MarkDownParser()
+      const markdownPath = join(__dirname, '../resources/03decorate.md')
+      const markdown = await fsPromises.readFile(markdownPath, 'utf-8')
+      const tokens = parser.parse(markdown)
+      console.log(JSON.stringify(tokens, null, 2))
+    })
   })
 })
