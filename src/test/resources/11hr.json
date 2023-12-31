@@ -1,16 +1,11 @@
 {
   "type": "bubble",
   "size": "giga",
-  "styles": {
-    "body": {
-      "separator": true
-    }
-  },
   "body": {
     "type": "box",
     "layout": "vertical",
-    "spacing": "md",
     "paddingAll": "xl",
+    "spacing": "md",
     "contents": [
       {
         "type": "box",
@@ -26,27 +21,8 @@
         "paddingBottom": "lg"
       },
       {
-        "type": "box",
-        "layout": "vertical",
-        "margin": "16px",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "backgroundColor": "#e3e5ed",
-            "width": "100%",
-            "height": "2px",
-            "cornerRadius": "1px",
-            "contents": []
-          },
-          {
-            "type": "box",
-            "layout": "horizontal",
-            "width": "100%",
-            "height": "16px",
-            "contents": []
-          }
-        ]
+        "type": "separator",
+        "margin": "md"
       },
       {
         "type": "text",
@@ -59,5 +35,10 @@
         ]
       }
     ]
+  },
+  "styles": {
+    "body": {
+      "separator": true
+    }
   }
 }
