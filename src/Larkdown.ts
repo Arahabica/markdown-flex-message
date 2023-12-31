@@ -31,6 +31,11 @@ export class Larkdown {
     const flex: FlexBubble = {
       type: "bubble",
       size: this.getRootSize(options),
+      styles: {
+        body: {
+          separator: true
+        }
+      },
       body: {
         type: "box",
         layout: "vertical",

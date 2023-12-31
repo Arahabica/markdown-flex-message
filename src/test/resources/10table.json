@@ -1,0 +1,686 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "styles": {
+    "body": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "paddingAll": "xl",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "種類"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "象 (アフリカゾウ)"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均体重 (kg)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約6,000"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均身長 (m)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約3〜4"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "生息域"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "アフリカのサバンナや森林"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "種類"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "象 (アジアゾウ)"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均体重 (kg)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約4,000"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均身長 (m)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約2.5〜3"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "生息域"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "アジアの熱帯雨林や混交林"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "種類"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "キリン"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均体重 (kg)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約1,200"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均身長 (m)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約4.5〜6"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "生息域"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "アフリカのサバンナや開けた森林"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "種類"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "サイ (白サイ)"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均体重 (kg)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約2,300"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均身長 (m)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約1.8"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "生息域"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "アフリカのサバンナや森林"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "種類"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "サイ (黒サイ)"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均体重 (kg)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約1,000〜1,400"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "平均身長 (m)"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "約1.5"
+                  }
+                ],
+                "align": "end",
+                "flex": 2
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "生息域"
+                  }
+                ],
+                "weight": "bold",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "アフリカのサバンナや森林"
+                  }
+                ],
+                "flex": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "margin": "md"
+      }
+    ]
+  }
+}

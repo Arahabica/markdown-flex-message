@@ -73,13 +73,13 @@ describe('convert', () => {
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))
   })
-  // it('table', async () => {
-  //   const markdown = await fsPromises.readFile(join(dir, '10table.md'), 'utf-8')
-  //   // const json = await fsPromises.readFile(join(dir, '10table.json'), 'utf-8')
-  //   const flexContainer = convertToFlexBubble(markdown)
-  //   console.log(JSON.stringify(flexContainer, null, 2))
-  //   // expect(flexContainer).toEqual(JSON.parse(json))
-  // })
+  it('table', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '10table.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '10table.json'), 'utf-8')
+    const flexContainer = await convertToFlexBubble(markdown)
+    // console.log(JSON.stringify(flexContainer, null, 2))
+    expect(flexContainer).toEqual(JSON.parse(json))
+  })
   it('hr', async () => {
     const markdown = await fsPromises.readFile(join(dir, '11hr.md'), 'utf-8')
     const json = await fsPromises.readFile(join(dir, '11hr.json'), 'utf-8')

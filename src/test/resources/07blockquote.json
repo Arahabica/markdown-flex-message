@@ -1,6 +1,11 @@
 {
   "type": "bubble",
   "size": "giga",
+  "styles": {
+    "body": {
+      "separator": true
+    }
+  },
   "body": {
     "type": "box",
     "layout": "vertical",
