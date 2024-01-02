@@ -1,0 +1,6 @@
+import Prism from 'prismjs';
+
+// add two integers
+function add(a: number, b: number) {
+  return a + b;
+}

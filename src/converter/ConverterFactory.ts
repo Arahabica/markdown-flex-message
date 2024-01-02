@@ -16,6 +16,8 @@ import { ListConverter } from "./converters/ListConverter"
 import { TableConverter } from "./converters/TableConverter"
 import { HrConverter } from "./converters/HrConverter"
 import { SpaceConverter } from "./converters/SpaceConverter"
+import { CodeParser } from "../code/CodeParser"
+import { DefaultCodeHighlightTheme } from "../code/DefaultCodeHighlightTheme"
 
 export class ConverterFactory {
   create(token: Token): FlexConverter {
@@ -24,7 +26,9 @@ export class ConverterFactory {
     } else if (token.type === 'heading') {
       return new HeadingConverter()
     } else if (token.type === 'code') {
-      return new CodeConverter()
+      const codeParser = new CodeParser()
+      const codeHighlightTheme = new DefaultCodeHighlightTheme()
+      return new CodeConverter(codeParser, codeHighlightTheme)
     } else if (token.type === 'blockquote') {
       return new BlockquoteConverter()
     } else if (token.type === 'image') {

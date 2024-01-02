@@ -1,5 +1,5 @@
 import { MainConverter } from "./converter/MainConverter"
-import { MarkDownParser } from "./parser/MarkDownParser"
+import { MarkDownParser } from "./markdown/MarkDownParser"
 import { FlexBubble, FlexMessage } from "@line/bot-sdk"
 import { FlexConverter } from "./types"
 

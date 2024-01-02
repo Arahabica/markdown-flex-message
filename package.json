@@ -12,6 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "@line/bot-sdk": "^8.0.2",
+    "@types/prismjs": "^1.26.3",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
     "eslint": "^8.56.0",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "image-size": "^1.0.2",
-    "marked": "^11.1.0"
+    "marked": "^11.1.0",
+    "prismjs": "^1.29.0"
   }
 }

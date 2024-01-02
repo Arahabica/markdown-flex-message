@@ -1,6 +1,6 @@
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
-import { MarkDownParser } from '../../parser/MarkDownParser'
+import { MarkDownParser } from '../../markdown/MarkDownParser'
 import { it, describe, expect } from 'vitest'
 
 describe('MarkDownParser', () => {

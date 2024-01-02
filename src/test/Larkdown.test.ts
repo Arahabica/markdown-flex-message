@@ -3,7 +3,7 @@ import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
 
-const dir = join(__dirname, 'resources')
+const dir = join(__dirname, 'resources', 'markdown')
 describe('Larkdown', () => {
   describe('Larkdown#convert', () => {
     it('should return an array of tokens', async () => {

@@ -1,0 +1,832 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "styles": {
+    "body": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "paddingAll": "xl",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "下記のような "
+          },
+          {
+            "type": "span",
+            "text": "`Person.java`",
+            "weight": "bold",
+            "size": "sm"
+          },
+          {
+            "type": "span",
+            "text": " というファイルを作ります。"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "java",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "// Person.java",
+                    "color": "#8292a2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "public",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "class",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "Person",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "private",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "String",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": " name"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "private",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "int",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " age"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "public",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "Person",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "String",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": " name"
+                  },
+                  {
+                    "type": "span",
+                    "text": ",",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "int",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " age"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "this",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "name "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " name"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "this",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "age "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " age"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "public",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "String",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "getName",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " name"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "public",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "int",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "getAge",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " age"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "// Main.java",
+                    "color": "#8292a2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "public",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "class",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "Main",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "public",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "static",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "void",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "main",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "String",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "[",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "]",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " args"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "Person",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": " person "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "new",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "Person",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\"John Doe\"",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": ",",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "30",
+                    "color": "#ae81ff"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "System",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "out"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "println",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\"Name: \"",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "+",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " person"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "getName",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n       "
+                  },
+                  {
+                    "type": "span",
+                    "text": "System",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "out"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "println",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\"Age: \"",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "+",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " person"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "getAge",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n   "
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

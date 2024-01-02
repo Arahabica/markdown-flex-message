@@ -5,7 +5,7 @@ import { LineClient } from './test-utils/LineClient'
 import { FlexMessage } from '@line/bot-sdk'
 
 
-const dir = join(__dirname, 'resources')
+const dir = join(__dirname, 'resources', 'markdown')
 describe('validation', () => {
   it.skip('all', async () => {
     const channelAccessToken = process.env.CHANNEL_ACCESS_TOKEN
