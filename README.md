@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/Arahabica/larkdown/graph/badge.svg?token=ICO1VHV32M)](https://codecov.io/gh/Arahabica/larkdown)
+[![test](https://github.com/Arahabica/larkdown/actions/workflows/test.yml/badge.svg)](https://github.com/Arahabica/larkdown/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/Arahabica/larkdown/graph/badge.svg?token=ICO1VHV32M)](https://codecov.io/gh/Arahabica/larkdown)
 
 # Larkdown
 
