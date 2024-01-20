@@ -7,8 +7,10 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "vitest run --coverage",
-    "lint": "eslint ./ --fix",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix",
     "start": "ts-node src/index.ts"
   },
   "author": "Arahabica",

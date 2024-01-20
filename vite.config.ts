@@ -11,7 +11,8 @@ export default defineConfig({
         'src/**/*.d.ts',
         'src/test/**/*',
         'src/types.ts'
-      ]
+      ],
+      reporter: ["json", "html"]
     }
   }
 })
