@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Arahabica/larkdown/graph/badge.svg?token=ICO1VHV32M)](https://codecov.io/gh/Arahabica/larkdown)
+
 # Larkdown
 
 Larkdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
