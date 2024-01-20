@@ -1,4 +1,4 @@
-import { Larkdown, convertToFlexBubble } from '../Larkdown'
+import { Larkdown, convertToFlexBubble } from '../larkdown'
 import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'

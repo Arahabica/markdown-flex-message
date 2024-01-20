@@ -1,9 +1,12 @@
 {
-  "name": "larkdown",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@arahabica/larkdown",
+  "version": "0.1.11",
+  "description": "Larkdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.",
+  "main": "dist/larkdown.js",
+  "types": "dist/types.d.ts",
   "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
     "test": "vitest run --coverage",
     "lint": "eslint ./ --fix",
     "start": "ts-node src/index.ts"
@@ -11,7 +14,6 @@
   "author": "Arahabica",
   "license": "MIT",
   "devDependencies": {
-    "@line/bot-sdk": "^8.0.2",
     "@types/prismjs": "^1.26.3",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
@@ -24,8 +26,21 @@
     "vitest": "^1.1.0"
   },
   "dependencies": {
+    "@line/bot-sdk": "^8.0.2",
     "image-size": "^1.0.2",
     "marked": "^11.1.0",
     "prismjs": "^1.29.0"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "!dist/test/**/*",
+    "index.js",
+    "index.cjs",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">= 18"
   }
 }
