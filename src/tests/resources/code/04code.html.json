@@ -1,0 +1,110 @@
+[
+  {
+    "type": "doctype",
+    "text": "<!DOCTYPE html>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "<html lang=\"en\">"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "<head>"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "tag",
+    "text": "<meta charset=\"utf-8\">"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "tag",
+    "text": "<title>"
+  },
+  {
+    "type": "other",
+    "text": "Hello html"
+  },
+  {
+    "type": "tag",
+    "text": "</title>"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "tag",
+    "text": "<style>"
+  },
+  {
+    "type": "style",
+    "text": "\n    .root {\n      background-color: red;\n    }\n  "
+  },
+  {
+    "type": "tag",
+    "text": "</style>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "</head>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "<body>"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "tag",
+    "text": "<div id=\"root\">"
+  },
+  {
+    "type": "tag",
+    "text": "</div>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "</body>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "</html>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  }
+]

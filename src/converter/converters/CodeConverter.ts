@@ -55,7 +55,8 @@ export class CodeConverter implements FlexConverter {
       let color: string | undefined = style.color
       if (style.opacity !== undefined) {
         const baseColor = color || this.theme.codeTextColor
-        color = `${baseColor}${style.opacity.toString(16)}`
+        const opacityHex = Math.round(style.opacity * 255).toString(16)
+        color = `${baseColor}${opacityHex}`
       }
       components.push({
         type: "span",

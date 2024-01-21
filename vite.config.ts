@@ -9,7 +9,7 @@ export default defineConfig({
       all: true,
       exclude: [
         'src/**/*.d.ts',
-        'src/test/**/*',
+        'src/tests/**/*',
         'src/types.ts'
       ],
       reporter: ["json", "html"]

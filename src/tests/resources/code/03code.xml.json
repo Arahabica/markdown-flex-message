@@ -1,0 +1,34 @@
+[
+  {
+    "type": "prolog",
+    "text": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "<content:encoded>"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "cdata",
+    "text": "<![CDATA[\n    <p>ある日の暮方の事である。一人の下人が、羅生門の下で雨やみを待っていた。</p>\n  ]]>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "tag",
+    "text": "</content:encoded>"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  }
+]

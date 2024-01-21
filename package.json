@@ -37,8 +37,6 @@
     "dist/**/*.js",
     "dist/**/*.d.ts",
     "!dist/test/**/*",
-    "index.js",
-    "index.cjs",
     "LICENSE",
     "README.md"
   ],

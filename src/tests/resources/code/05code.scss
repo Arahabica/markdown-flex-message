@@ -1,0 +1,12 @@
+$variable: value 1;
+
+.rule-1 {
+  color: $variable;
+}
+
+.hello + span {
+  color: red;
+}
+.hidden {
+  display: none !important;
+}

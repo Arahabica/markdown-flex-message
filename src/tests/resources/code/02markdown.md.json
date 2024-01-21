@@ -1,0 +1,42 @@
+[
+  {
+    "type": "other",
+    "text": "# Markdown"
+  },
+  {
+    "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "italic",
+    "text": "*italic*"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "bold",
+    "text": "**bold**"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "other",
+    "text": "~~deleted~~"
+  },
+  {
+    "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "url",
+    "text": "[X](https://x.com)"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  }
+]
