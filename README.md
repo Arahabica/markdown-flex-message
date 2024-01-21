@@ -20,7 +20,7 @@ npm install larkdown
 ## Usage
 
 ```js
-import { convertToFlexMessage } from "@arahabica/larkdown"
+import { convertToFlexMessage } from "larkdown"
 
 const markdownText = `
 # Larkdown
