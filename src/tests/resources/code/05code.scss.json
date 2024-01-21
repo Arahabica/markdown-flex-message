@@ -1,0 +1,150 @@
+[
+  {
+    "type": "property",
+    "text": "$variable"
+  },
+  {
+    "type": "punctuation",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " value 1"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "selector",
+    "text": ".rule-1 "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "property",
+    "text": "color"
+  },
+  {
+    "type": "punctuation",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "variable",
+    "text": "$variable"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "selector",
+    "text": ".hello + span "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "property",
+    "text": "color"
+  },
+  {
+    "type": "punctuation",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " red"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "selector",
+    "text": ".hidden "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "property",
+    "text": "display"
+  },
+  {
+    "type": "punctuation",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " none "
+  },
+  {
+    "type": "important",
+    "text": "!important"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  }
+]

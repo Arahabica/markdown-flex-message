@@ -1,0 +1,30 @@
+[
+  {
+    "type": "other",
+    "text": "var1 "
+  },
+  {
+    "type": "operator",
+    "text": "="
+  },
+  {
+    "type": "other",
+    "text": " hoge"
+  },
+  {
+    "type": "operator",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "symbol",
+    "text": ":fuga"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  }
+]

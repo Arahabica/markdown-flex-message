@@ -94,4 +94,14 @@ describe('convert', () => {
     // console.log(JSON.stringify(flexContainer, null, 2))
     expect(flexContainer).toEqual(JSON.parse(json))
   })
+  it('code_many', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '13code_many.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '13code_many.json'), 'utf-8')
+    const flexContainer = await convertToFlexBubble(markdown)
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexContainer, null, 2))
+    } else {
+      expect(flexContainer).toEqual(JSON.parse(json))
+    }
+  })
 })

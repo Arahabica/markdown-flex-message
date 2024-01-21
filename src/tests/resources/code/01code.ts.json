@@ -133,6 +133,394 @@
   },
   {
     "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "keyword",
+    "text": "function"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "function",
+    "text": "foo"
+  },
+  {
+    "type": "punctuation",
+    "text": "("
+  },
+  {
+    "type": "punctuation",
+    "text": ")"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "const"
+  },
+  {
+    "type": "other",
+    "text": " foo "
+  },
+  {
+    "type": "operator",
+    "text": "="
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "string",
+    "text": "\"foo\""
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "const"
+  },
+  {
+    "type": "other",
+    "text": " bar "
+  },
+  {
+    "type": "operator",
+    "text": "="
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "string",
+    "text": "\"bar\""
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "return"
+  },
+  {
+    "type": "other",
+    "text": " foo "
+  },
+  {
+    "type": "operator",
+    "text": "+"
+  },
+  {
+    "type": "other",
+    "text": " bar"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "keyword",
+    "text": "function"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "function",
+    "text": "isBig"
+  },
+  {
+    "type": "punctuation",
+    "text": "("
+  },
+  {
+    "type": "other",
+    "text": "num"
+  },
+  {
+    "type": "operator",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "other",
+    "text": "number"
+  },
+  {
+    "type": "punctuation",
+    "text": ")"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "if"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "punctuation",
+    "text": "("
+  },
+  {
+    "type": "other",
+    "text": "num "
+  },
+  {
+    "type": "operator",
+    "text": ">"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "number",
+    "text": "10000"
+  },
+  {
+    "type": "punctuation",
+    "text": ")"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n    "
+  },
+  {
+    "type": "keyword",
+    "text": "return"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "boolean",
+    "text": "true"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "return"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "boolean",
+    "text": "false"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
+    "text": "\n\n"
+  },
+  {
+    "type": "keyword",
+    "text": "function"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "function",
+    "text": "isTel"
+  },
+  {
+    "type": "punctuation",
+    "text": "("
+  },
+  {
+    "type": "other",
+    "text": "text"
+  },
+  {
+    "type": "operator",
+    "text": ":"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "other",
+    "text": "string"
+  },
+  {
+    "type": "punctuation",
+    "text": ")"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "punctuation",
+    "text": "{"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "const"
+  },
+  {
+    "type": "other",
+    "text": " regex "
+  },
+  {
+    "type": "operator",
+    "text": "="
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "regex",
+    "text": "/^\\d{3}-\\d{4}-\\d{4}$/"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n  "
+  },
+  {
+    "type": "keyword",
+    "text": "return"
+  },
+  {
+    "type": "other",
+    "text": " regex"
+  },
+  {
+    "type": "punctuation",
+    "text": "."
+  },
+  {
+    "type": "function",
+    "text": "test"
+  },
+  {
+    "type": "punctuation",
+    "text": "("
+  },
+  {
+    "type": "other",
+    "text": "text"
+  },
+  {
+    "type": "punctuation",
+    "text": ")"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "punctuation",
+    "text": "}"
+  },
+  {
+    "type": "other",
     "text": "\n"
   }
 ]

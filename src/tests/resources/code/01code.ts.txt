@@ -4,3 +4,21 @@ import Prism from 'prismjs';
 function add(a: number, b: number) {
   return a + b;
 }
+
+function foo() {
+  const foo = "foo";
+  const bar = "bar";
+  return foo + bar;
+}
+
+function isBig(num: number) {
+  if (num > 10000) {
+    return true;
+  }
+  return false;
+}
+
+function isTel(text: string) {
+  const regex = /^\d{3}-\d{4}-\d{4}$/;
+  return regex.test(text);
+}

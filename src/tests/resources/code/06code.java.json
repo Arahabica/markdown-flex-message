@@ -1,0 +1,42 @@
+[
+  {
+    "type": "keyword",
+    "text": "package"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "namespace",
+    "text": "jp.co.xxx"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  },
+  {
+    "type": "keyword",
+    "text": "import"
+  },
+  {
+    "type": "other",
+    "text": " "
+  },
+  {
+    "type": "namespace",
+    "text": "example.hogehoge"
+  },
+  {
+    "type": "punctuation",
+    "text": ";"
+  },
+  {
+    "type": "other",
+    "text": "\n"
+  }
+]

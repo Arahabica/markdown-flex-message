@@ -1,0 +1,1307 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "styles": {
+    "body": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "paddingAll": "xl",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "typescript",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "import",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " Prism "
+                  },
+                  {
+                    "type": "span",
+                    "text": "from",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "'prismjs'",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "// add two integers",
+                    "color": "#8292a2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "function",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "add",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "a"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "number"
+                  },
+                  {
+                    "type": "span",
+                    "text": ",",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " b"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "number"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " a "
+                  },
+                  {
+                    "type": "span",
+                    "text": "+",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " b"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "function",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "foo",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "const",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " foo "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "\"foo\"",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "const",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " bar "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "\"bar\"",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " foo "
+                  },
+                  {
+                    "type": "span",
+                    "text": "+",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " bar"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "function",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "isBig",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "num"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "number"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "if",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "num "
+                  },
+                  {
+                    "type": "span",
+                    "text": ">",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "10000",
+                    "color": "#ae81ff"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n    "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "true",
+                    "color": "#ae81ff"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "false",
+                    "color": "#ae81ff"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "function",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "isTel",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "text"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "string"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "const",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " regex "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "/^\\d{3}-\\d{4}-\\d{4}$/",
+                    "color": "#fd971f"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "return",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " regex"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "test",
+                    "color": "#e6db74"
+                  },
+                  {
+                    "type": "span",
+                    "text": "(",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "text"
+                  },
+                  {
+                    "type": "span",
+                    "text": ")",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "markdown",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "# Markdown"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "*italic*",
+                    "style": "italic"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "**bold**",
+                    "weight": "bold"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "~~deleted~~"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "[X](https://x.com)",
+                    "color": "#f8f8f2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "xml",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>",
+                    "color": "#8292a2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "<content:encoded>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "<![CDATA[\n    <p>ある日の暮方の事である。一人の下人が、羅生門の下で雨やみを待っていた。</p>\n  ]]>",
+                    "color": "#8292a2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</content:encoded>",
+                    "color": "#f92672"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "html",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "<!DOCTYPE html>",
+                    "color": "#8292a2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "<html lang=\"en\">",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "<head>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "<meta charset=\"utf-8\">",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "<title>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "Hello html"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</title>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "<style>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n    .root {\n      background-color: red;\n    }\n  ",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</style>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</head>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "<body>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "<div id=\"root\">",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</div>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</body>",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "</html>",
+                    "color": "#f92672"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "scss",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "$variable",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " value 1"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".rule-1 ",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "color",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "$variable",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".hello + span ",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "color",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " red"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": ".hidden ",
+                    "color": "#a6e22e"
+                  },
+                  {
+                    "type": "span",
+                    "text": "{",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n  "
+                  },
+                  {
+                    "type": "span",
+                    "text": "display",
+                    "color": "#f92672"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " none "
+                  },
+                  {
+                    "type": "span",
+                    "text": "!important",
+                    "color": "#fd971f"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "}",
+                    "color": "#f8f8f2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "java",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "package",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "jp.co.xxx",
+                    "color": "#f8f8f2b3"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": "\n"
+                  },
+                  {
+                    "type": "span",
+                    "text": "import",
+                    "color": "#66d9ef"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": "example.hogehoge",
+                    "color": "#f8f8f2b3"
+                  },
+                  {
+                    "type": "span",
+                    "text": ";",
+                    "color": "#f8f8f2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "backgroundColor": "#272822",
+        "cornerRadius": "6px",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "ruby",
+                "color": "#d9d9d8",
+                "size": "xs"
+              }
+            ],
+            "backgroundColor": "#343548",
+            "paddingTop": "3px",
+            "paddingBottom": "3px",
+            "paddingStart": "6px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "paddingAll": "6px",
+            "contents": [
+              {
+                "type": "text",
+                "size": "xs",
+                "wrap": true,
+                "color": "#f8f8f2",
+                "contents": [
+                  {
+                    "type": "span",
+                    "text": "var1 "
+                  },
+                  {
+                    "type": "span",
+                    "text": "=",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " hoge"
+                  },
+                  {
+                    "type": "span",
+                    "text": ":",
+                    "color": "#f8f8f2"
+                  },
+                  {
+                    "type": "span",
+                    "text": " "
+                  },
+                  {
+                    "type": "span",
+                    "text": ":fuga",
+                    "color": "#f92672"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
