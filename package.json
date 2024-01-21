@@ -1,6 +1,6 @@
 {
-  "name": "@arahabica/larkdown",
-  "version": "0.1.11",
+  "name": "larkdown",
+  "version": "0.1.1",
   "description": "Larkdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.",
   "main": "dist/larkdown.js",
   "types": "dist/types.d.ts",
