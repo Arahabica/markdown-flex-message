@@ -4,7 +4,7 @@ import { ImageSizeScale } from '../../lib/ImageSizeScale'
 describe('ImageSizeScale', () => {
   describe('size', () => {
     it('jpg', async () => {
-      const imageUrl = "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=Larkdown"
+      const imageUrl = "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=line-markdown"
       const res = await fetch(imageUrl)
       const arrayBuffer = await res.arrayBuffer()
       const buffer = Buffer.from(arrayBuffer)

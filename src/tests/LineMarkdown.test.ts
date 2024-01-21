@@ -1,16 +1,16 @@
-import { Larkdown, convertToFlexBubble } from '../larkdown'
+import { LineMarkdown, convertToFlexBubble } from '../line-markdown'
 import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
 
 const dir = join(__dirname, 'resources', 'markdown')
-describe('Larkdown', () => {
-  describe('Larkdown#convert', () => {
+describe('LineMarkdown', () => {
+  describe('LineMarkdown#convert', () => {
     it('should return an array of tokens', async () => {
       const markdown = await fsPromises.readFile(join(dir, '01hello.md'), 'utf-8')
       const json = await fsPromises.readFile(join(dir, '01hello.json'), 'utf-8')
-      const larkdown = new Larkdown()
-      const flexContainer = await larkdown.convertToFlexBubble(markdown)
+      const lineMarkdown = new LineMarkdown()
+      const flexContainer = await lineMarkdown.convertToFlexBubble(markdown)
       // console.log(JSON.stringify(flexContainer, null, 2))
       expect(flexContainer.type).toEqual('bubble')
       expect(flexContainer).toEqual(JSON.parse(json))

@@ -1,30 +1,30 @@
 <p align="center">
-  <img width="180" src="https://raw.githubusercontent.com/Arahabica/larkdown/main/docs/images/larkdown.png" alt="Larkdown logo">
+  <img width="180" src="https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/line-markdown.png" alt="line-markdown logo">
 </p>
 <p align="center">
-  <a href="https://badge.fury.io/js/@arahabica%2Flarkdown" rel="nofollow"><img src="https://badge.fury.io/js/@arahabica%2Flarkdown.svg" alt="npm version"></a>
-  <a href="https://github.com/Arahabica/larkdown/actions/workflows/test.yml"><img src="https://github.com/Arahabica/larkdown/actions/workflows/test.yml/badge.svg" alt="test"></a>
-  <a href="https://codecov.io/gh/Arahabica/larkdown" rel="nofollow"><img src="https://codecov.io/gh/Arahabica/larkdown/graph/badge.svg?token=ICO1VHV32M" alt="codecov""></a>
+  <a href="https://badge.fury.io/js/line-markdown" rel="nofollow"><img src="https://badge.fury.io/js/line-markdown.svg" alt="npm version"></a>
+  <a href="https://github.com/Arahabica/line-markdown/actions/workflows/test.yml"><img src="https://github.com/Arahabica/line-markdown/actions/workflows/test.yml/badge.svg" alt="test"></a>
+  <a href="https://codecov.io/gh/Arahabica/line-markdown" rel="nofollow"><img src="https://codecov.io/gh/Arahabica/line-markdown/graph/badge.svg?token=ICO1VHV32M" alt="codecov""></a>
 </p>
 
-# Larkdown
+# line-markdown
 
-Larkdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
+line-markdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
 
 ## Installation
 
 ```:sh
-npm install larkdown
+npm install linedown
 ```
 
 ## Usage
 
 ```js
-import { convertToFlexMessage } from "larkdown"
+import { convertToFlexMessage } from "line-markdown"
 
 const markdownText = `
-# Larkdown
-Hello Larkdown.
+# line-markdown
+Hello line-markdown.
 `.trim()
 
 convertToFlexMessage(markdown)

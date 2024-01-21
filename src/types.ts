@@ -1,7 +1,7 @@
 import { Token } from "marked"
 import { FlexComponent, FlexSpan, FlexText } from "@line/bot-sdk"
 
-export * from "./larkdown"
+export * from "./line-markdown"
 
 export interface FlexConverter {
   convert(token: Token): Promise<FlexComponent[]>

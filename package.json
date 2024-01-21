@@ -1,8 +1,8 @@
 {
-  "name": "larkdown",
-  "version": "0.1.1",
-  "description": "Larkdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.",
-  "main": "dist/larkdown.js",
+  "name": "line-markdown",
+  "version": "0.1.2",
+  "description": "line-markdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.",
+  "main": "dist/line-markdown.js",
   "types": "dist/types.d.ts",
   "scripts": {
     "build": "tsc",

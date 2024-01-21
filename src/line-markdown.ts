@@ -8,9 +8,9 @@ export type ConvertOptions = {
 }
 
 /**
- * Larkdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
+ * line-markdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
  */
-export class Larkdown {
+export class LineMarkdown {
   parser: MarkDownParser
   converter: FlexConverter
 
@@ -107,8 +107,8 @@ export const convertToFlexMessage = (
   altText: string = 'markdown',
   options: ConvertOptions = {}
 ): Promise<FlexMessage> => {
-  const larkdown = new Larkdown()
-  return larkdown.convertToFlexMessage(markdown, altText, options)
+  const lineMarkdown = new LineMarkdown()
+  return lineMarkdown.convertToFlexMessage(markdown, altText, options)
 }
 
 /**
@@ -120,8 +120,8 @@ export const convertToFlexMessage = (
  * @returns {Promise<FlexBubble>} [Flex Bubble](https://developers.line.biz/en/reference/messaging-api/#bubble)
  */
 export const convertToFlexBubble = (markdown: string, options: ConvertOptions = {}): Promise<FlexBubble> => {
-  const larkdown = new Larkdown()
-  return larkdown.convertToFlexBubble(markdown, options)
+  const lineMarkdown = new LineMarkdown()
+  return lineMarkdown.convertToFlexBubble(markdown, options)
 }
 
 /**
@@ -131,6 +131,6 @@ export const convertToFlexBubble = (markdown: string, options: ConvertOptions = 
  * @returns {Promise<FlexBox>} [Flex box](https://developers.line.biz/en/reference/messaging-api/#box)
  */
 export const convertToFlexBox = (markdown: string): Promise<FlexBox> => {
-  const larkdown = new Larkdown()
-  return larkdown.convertToFlexBox(markdown)
+  const lineMarkdown = new LineMarkdown()
+  return lineMarkdown.convertToFlexBox(markdown)
 }
