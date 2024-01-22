@@ -7,6 +7,8 @@ export interface FlexConverter {
   convert(token: Token): Promise<FlexComponent[]>
 }
 
+export type TextType = 'markdown' | 'code' | 'plain'
+
 export type DecoratableFlex = FlexSpan | FlexText
 
 export type CodeTokenType =

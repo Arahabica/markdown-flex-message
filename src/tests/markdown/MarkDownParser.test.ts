@@ -5,15 +5,15 @@ describe('MarkDownParser', () => {
   describe('parse', () => {
     it('hello', () => {
       const parser = new MarkDownParser()
-      const tokens = parser.parse('Hello, world!')
+      const { tokensList } = parser.parse('Hello, world!')
       // console.log(JSON.stringify(tokens, null, 2))
-      expect(tokens[0].type).toEqual('paragraph')
-      if (tokens[0].type !== 'paragraph')
+      expect(tokensList[0].type).toEqual('paragraph')
+      if (tokensList[0].type !== 'paragraph')
         throw new Error('type is not paragraph')
-      expect(tokens[0].text).toEqual('Hello, world!')
-      if (!(tokens[0].tokens && tokens[0].tokens[0].type === 'text'))
+      expect(tokensList[0].text).toEqual('Hello, world!')
+      if (!(tokensList[0].tokens && tokensList[0].tokens[0].type === 'text'))
         throw new Error('type is not text')
-      expect(tokens[0].tokens[0].text).toEqual('Hello, world!')
+      expect(tokensList[0].tokens[0].text).toEqual('Hello, world!')
     })
     it('header', () => {
       const parser = new MarkDownParser()
@@ -24,9 +24,8 @@ describe('MarkDownParser', () => {
 
 hoge
       `.trim()
-      const tokens = parser.parse(markdown)
-      // console.log(JSON.stringify(tokens, null, 2))
-      expect(JSON.parse(JSON.stringify(tokens))).toEqual([
+      const { tokensList } = parser.parse(markdown)
+      expect(JSON.parse(JSON.stringify(tokensList))).toEqual([
         {
           type: 'heading',
           raw: '# Hello\n\n',
@@ -72,9 +71,9 @@ hoge
       const markdown = `
 hello **World**!
       `.trim()
-      const tokens = parser.parse(markdown)
+      const { tokensList } = parser.parse(markdown)
       // console.log(JSON.stringify(tokens, null, 2))
-      const paragraph = tokens[0]
+      const paragraph = tokensList[0]
       expect(paragraph.type).toEqual('paragraph')
       if (paragraph.type !== 'paragraph')
         throw new Error('type is not paragraph')
@@ -104,12 +103,5 @@ hello **World**!
         }
       ])
     })
-    // it('main', async () => {
-    //   const parser = new MarkDownParser()
-    //   const markdownPath = join(__dirname, '../resources/10table.md')
-    //   const markdown = await fsPromises.readFile(markdownPath, 'utf-8')
-    //   const tokens = parser.parse(markdown)
-    //   console.log(JSON.stringify(tokens, null, 2))
-    // })
   })
 })
