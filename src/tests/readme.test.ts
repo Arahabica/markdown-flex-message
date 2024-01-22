@@ -11,9 +11,6 @@ describe('README.md', () => {
     return new Promise<void>((resolve, reject) => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
-      const client = new line.messagingApi.MessagingApiClient({
-        channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
-      })
       const markdownText = `
 # Fluits
 * apple
@@ -22,6 +19,9 @@ describe('README.md', () => {
 `.trim()
       convertToFlexMessage(markdownText)
         .then(({ flexMessage }) => {
+          const client = new line.messagingApi.MessagingApiClient({
+            channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
+          })
           return client.pushMessage({
             to: YOUR_USER_ID,
             messages: [flexMessage]
@@ -38,9 +38,6 @@ describe('README.md', () => {
     return new Promise<void>((resolve, reject) => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
-      const client = new line.messagingApi.MessagingApiClient({
-        channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
-      })
       const markdownText = `
 # Fluits
 * apple
@@ -49,6 +46,9 @@ describe('README.md', () => {
 `.trim()
       convertToFlexMessage(markdownText, 'Fluits', { size: 'mega' })
         .then(({ flexMessage }) => {
+          const client = new line.messagingApi.MessagingApiClient({
+            channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
+          })
           return client.pushMessage({
             to: YOUR_USER_ID,
             messages: [flexMessage]
@@ -65,9 +65,6 @@ describe('README.md', () => {
     return new Promise<void>((resolve, reject) => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
-      const client = new line.messagingApi.MessagingApiClient({
-        channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
-      })
       const markdownText =
         [
           '```typescript                                 ',
@@ -78,6 +75,9 @@ describe('README.md', () => {
         ].join("\n")
       convertToFlexMessage(markdownText, 'Typescript sample')
         .then(({ flexMessage }) => {
+          const client = new line.messagingApi.MessagingApiClient({
+            channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
+          })
           return client.pushMessage({
             to: YOUR_USER_ID,
             messages: [flexMessage]
@@ -94,9 +94,6 @@ describe('README.md', () => {
     return new Promise<void>((resolve, reject) => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
-      const client = new line.messagingApi.MessagingApiClient({
-        channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
-      })
       const markdownText = `
 # Fluits
 * apple
@@ -134,6 +131,9 @@ describe('README.md', () => {
               ]
             }
           }
+          const client = new line.messagingApi.MessagingApiClient({
+            channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
+          })
           return client.pushMessage({
             to: YOUR_USER_ID,
             messages: [message]
@@ -150,9 +150,6 @@ describe('README.md', () => {
     return new Promise<void>((resolve, reject) => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
-      const client = new line.messagingApi.MessagingApiClient({
-        channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
-      })
       const markdownText = `
 # Fluits
 * apple
@@ -184,6 +181,9 @@ describe('README.md', () => {
               }
             }
           }
+          const client = new line.messagingApi.MessagingApiClient({
+            channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
+          })
           return client.pushMessage({
             to: YOUR_USER_ID,
             messages: [message]
