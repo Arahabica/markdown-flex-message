@@ -71,8 +71,9 @@ hoge
       const markdown = `
 hello **World**!
       `.trim()
-      const { tokensList } = parser.parse(markdown)
+      const { tokensList, textType } = parser.parse(markdown)
       // console.log(JSON.stringify(tokens, null, 2))
+      expect(textType).toEqual('markdown')
       const paragraph = tokensList[0]
       expect(paragraph.type).toEqual('paragraph')
       if (paragraph.type !== 'paragraph')
@@ -102,6 +103,27 @@ hello **World**!
           "text": "!"
         }
       ])
+    })
+    it('plain', () => {
+      const parser = new MarkDownParser()
+      const markdown =
+        "As I Remember, Adam, It Was Upon This Fashion Bequeathed Me " +
+        "By Will But Poor A Thousand Crowns, And, As Thou Sayest, " +
+        "Charged My Brother, On His Blessing, To Breed Me Well: And There Begins My Sadness."
+      const { textType } = parser.parse(markdown)
+      expect(textType).toEqual('plain')
+    })
+    it('code', () => {
+      const parser = new MarkDownParser()
+      const markdown = '```javascript\nconst a = 1\n```'
+      const { textType } = parser.parse(markdown)
+      expect(textType).toEqual('code')
+    })
+    it('code_with_text', () => {
+      const parser = new MarkDownParser()
+      const markdown = 'This is a javascript sample code. \n```javascript\nconst a = 1\n```'
+      const { textType } = parser.parse(markdown)
+      expect(textType).toEqual('markdown')
     })
   })
 })
