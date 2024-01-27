@@ -1,4 +1,9 @@
-import { LineMarkdown, convertToFlexBubble } from '../line-markdown'
+import {
+  LineMarkdown,
+  convertToFlexMessage,
+  convertToFlexBubble,
+  convertToFlexBox
+} from '../line-markdown'
 import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
@@ -17,7 +22,40 @@ describe('LineMarkdown', () => {
     })
   })
 })
-describe('convert', () => {
+describe('convertToFlexMessage', () => {
+  it('default_alt_text', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
+    const { flexMessage } = await convertToFlexMessage(markdown)
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexMessage, null, 2))
+    } else {
+      const flexBubble = JSON.parse(json)
+      expect(flexMessage).toEqual({
+        type: 'flex',
+        altText: 'markdown',
+        contents: flexBubble
+      })
+    }
+  })
+  it('alt_text', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
+    const { flexMessage } = await convertToFlexMessage(markdown, 'Alternative text')
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexMessage, null, 2))
+    } else {
+      const flexBubble = JSON.parse(json)
+      expect(flexMessage).toEqual({
+        type: 'flex',
+        altText: 'Alternative text',
+        contents: flexBubble
+      })
+    }
+  })
+})
+
+describe('convertToFlexBubble', () => {
   it('ok', async () => {
     const markdown = await fsPromises.readFile(join(dir, '01hello.md'), 'utf-8')
     const json = await fsPromises.readFile(join(dir, '01hello.json'), 'utf-8')
@@ -136,6 +174,56 @@ describe('convert', () => {
       console.log(JSON.stringify(flexBubble, null, 2))
     } else {
       expect(flexBubble).toEqual(JSON.parse(json))
+    }
+  })
+  it('code_only', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '14code_only.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '14code_only.json'), 'utf-8')
+    const { flexBubble, textType } = await convertToFlexBubble(markdown)
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexBubble, null, 2))
+    } else {
+      const flexBubble = JSON.parse(json)
+      expect(textType).toEqual('code')
+      expect(flexBubble.body.paddingAll).toEqual('none')
+      expect(flexBubble).toEqual(JSON.parse(json))
+    }
+  })
+  it('html', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '15html.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '15html.json'), 'utf-8')
+    const { flexBubble } = await convertToFlexBubble(markdown)
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexBubble, null, 2))
+    } else {
+      const flexBubble = JSON.parse(json)
+      expect(flexBubble).toEqual(JSON.parse(json))
+    }
+  })
+  it('image_invalid', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '16image_invalid.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '16image_invalid.json'), 'utf-8')
+    const { flexBubble } = await convertToFlexBubble(markdown)
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexBubble, null, 2))
+    } else {
+      const flexBubble = JSON.parse(json)
+      expect(flexBubble).toEqual(JSON.parse(json))
+    }
+  })
+})
+
+describe('convertToFlexBox', () => {
+  it('code_only', async () => {
+    const markdown = await fsPromises.readFile(join(dir, '14code_only.md'), 'utf-8')
+    const json = await fsPromises.readFile(join(dir, '14code_only.json'), 'utf-8')
+    const { flexBox, textType } = await convertToFlexBox(markdown)
+    if (process.env.DEBUG) {
+      console.log(JSON.stringify(flexBox, null, 2))
+    } else {
+      const flexBubble = JSON.parse(json)
+      expect(textType).toEqual('code')
+      expect(flexBox).toEqual(flexBubble.body)
     }
   })
 })

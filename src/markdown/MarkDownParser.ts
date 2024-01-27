@@ -16,7 +16,6 @@ export class MarkDownParser {
     return lexer(markdown)
   }
   private detectTextType(tokensList: TokensList): TextType {
-    console.log(JSON.stringify(tokensList, null, 2))
     if (tokensList.length === 1 && tokensList[0].type === 'code') {
       return 'code'
     }

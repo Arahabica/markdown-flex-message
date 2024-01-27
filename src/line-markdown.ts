@@ -75,7 +75,7 @@ export class LineMarkdown {
    */
   async convertToFlexBox(markdown: string): Promise<{ flexBox: FlexBox, textType: TextType }> {
     const { flexBox, textType } = await this.convert(markdown)
-    flexBox.paddingAll = '0px'
+    flexBox.paddingAll = 'none'
     return { flexBox, textType }
   }
   private async convert(markdown: string): Promise<{ flexBox: FlexBox, textType: TextType }> {
