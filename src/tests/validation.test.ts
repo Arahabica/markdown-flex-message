@@ -7,8 +7,10 @@ import { FlexMessage } from '@line/bot-sdk'
 
 const dir = join(__dirname, 'resources', 'markdown')
 describe('validation', () => {
-  it.skip('all', async () => {
-    const channelAccessToken = process.env.CHANNEL_ACCESS_TOKEN
+  const channelAccessToken = process.env.CHANNEL_ACCESS_TOKEN
+  // If CHANNEL_ACCESS_TOKEN is not set, skip this test
+  const _it = channelAccessToken ? it : it.skip
+  _it('all', async () => {
     if (!channelAccessToken) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
     const lineClient = new LineClient({ channelAccessToken })
     const fileList = await fsPromises.readdir(dir)

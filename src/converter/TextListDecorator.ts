@@ -16,7 +16,6 @@ export class TextListDecorator {
       return [span]
     }
     const components: FlexComponent[] = []
-    // token.tokens.forEach(token => {
     for (const childToken of token.tokens) {
       const childComponents = await mainConverter.convert(childToken)
       childComponents.forEach(component => {

@@ -13,25 +13,55 @@ line-markdown is a converter that transforms Markdown into Flex Message for the 
 
 ## Installation
 
-```:sh
-npm install linedown
+```bash
+npm install line-markdown --save
 ```
 
 ## Usage
 
+### Basic usage
+
+Convert the markdown to a Flex Message.
+
+#### Code
+
 ```js
-import { convertToFlexMessage } from "line-markdown"
+import { convertToFlexMessage } from 'line-markdown'
+import * as line from '@line/bot-sdk'
 
 const markdownText = `
-# line-markdown
-Hello line-markdown.
+# Fluits
+* apple
+* banana
+* cherry
 `.trim()
 
-convertToFlexMessage(markdown)
-  .then((result) => {
-    console.log(JSON.stringify(result, null, 2))
+convertToFlexMessage(markdownText)
+  .then(({ flexMessage }) => {
+    const client = new line.messagingApi.MessagingApiClient({
+      channelAccessToken: '{{YOUR_CHANNEL_ACCESS_TOKEN}}'
+    })
+    return client.pushMessage({
+      to: '{{YOUR_USER_ID}}',
+      messages: [flexMessage]
+    })
+  })
+  .then(() => {
+    console.log('sent.')
   })
 ```
+
+#### Result
+
+**Talk List Screen**
+The alternative text is set to `markdown` by default, so the talk list screen will show `markdown`.
+
+![Example1 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_alt.jpg)
+
+**Talk Screen**
+The size of the Flex message bubble is set to `giga` by default.
+
+![Example1 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_flex.jpg)
 
 ## License
 

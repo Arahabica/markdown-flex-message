@@ -1,0 +1,22 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "styles": {
+    "body": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "text",
+        "text": "<p>\n  <span style=\"text-align: center;\">hello world</span>\n</p>\n",
+        "wrap": true
+      }
+    ],
+    "paddingAll": "xl"
+  }
+}

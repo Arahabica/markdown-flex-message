@@ -1,0 +1,33 @@
+{
+  "type": "bubble",
+  "size": "giga",
+  "styles": {
+    "body": {
+      "separator": true
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "text",
+        "wrap": true,
+        "contents": [
+          {
+            "type": "span",
+            "text": "This is not image."
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/Arahabica/line-markdown/main/README.md",
+        "aspectRatio": "20:13",
+        "size": "full"
+      }
+    ],
+    "paddingAll": "xl"
+  }
+}
