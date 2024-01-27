@@ -19,6 +19,12 @@ npm install line-markdown --save
 
 ## Usage
 
+### Basic usage
+
+Convert the markdown to a Flex Message.
+
+#### Code
+
 ```js
 import { convertToFlexMessage } from 'line-markdown'
 import * as line from '@line/bot-sdk'
@@ -29,6 +35,7 @@ const markdownText = `
 * banana
 * cherry
 `.trim()
+
 convertToFlexMessage(markdownText)
   .then(({ flexMessage }) => {
     const client = new line.messagingApi.MessagingApiClient({
@@ -43,6 +50,18 @@ convertToFlexMessage(markdownText)
     console.log('sent.')
   })
 ```
+
+#### Result
+
+**Talk List Screen**
+The alternative text is set to `markdown` by default, so the talk list screen will show `markdown`.
+
+![Example1 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_alt.jpg)
+
+**Talk Screen**
+The size of the Flex message bubble is set to `giga` by default.
+
+![Example1 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_flex.jpg)
 
 ## License
 
