@@ -109,7 +109,8 @@ hello **World**!
       const markdown =
         "As I Remember, Adam, It Was Upon This Fashion Bequeathed Me " +
         "By Will But Poor A Thousand Crowns, And, As Thou Sayest, " +
-        "Charged My Brother, On His Blessing, To Breed Me Well: And There Begins My Sadness."
+        "Charged My Brother, On His Blessing, To Breed Me Well: And There Begins My Sadness." + "\n\n" +
+        "For I Didst Believe Much Joy Would Follow It, "
       const { textType } = parser.parse(markdown)
       expect(textType).toEqual('plain')
     })
