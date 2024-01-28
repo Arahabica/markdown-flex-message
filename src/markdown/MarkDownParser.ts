@@ -19,12 +19,11 @@ export class MarkDownParser {
     if (tokensList.length === 1 && tokensList[0].type === 'code') {
       return 'code'
     }
-    if (
-      tokensList.length === 1 &&
-      tokensList[0].type === 'paragraph' &&
-      tokensList[0].tokens?.length === 1) {
-      return 'plain'
+    for(const token of tokensList) {
+      if (!(token.type === 'paragraph' && token.tokens?.length === 1) && token.type !== 'space') {
+        return 'markdown'
+      }
     }
-    return 'markdown'  
+    return 'plain'  
   }
 }
