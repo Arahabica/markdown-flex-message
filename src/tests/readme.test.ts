@@ -12,7 +12,7 @@ describe('README.md', () => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
       const markdownText = `
-# Fluits
+# Fruits
 * apple
 * banana
 * cherry
@@ -39,12 +39,12 @@ describe('README.md', () => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
       const markdownText = `
-# Fluits
+# Fruits
 * apple
 * banana
 * cherry
 `.trim()
-      convertToFlexMessage(markdownText, 'Fluits', { size: 'mega' })
+      convertToFlexMessage(markdownText, 'Fruits', { size: 'mega' })
         .then(({ flexMessage }) => {
           const client = new line.messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
@@ -95,7 +95,7 @@ describe('README.md', () => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
       const markdownText = `
-# Fluits
+# Fruits
 * apple
 * banana
 * cherry
@@ -104,7 +104,7 @@ describe('README.md', () => {
         .then(({ flexBubble }) => {
           const message = {
             type: "flex",
-            altText: 'Fluits',
+            altText: 'Fruits',
             contents: {
               type: 'carousel',
               contents: [
@@ -151,7 +151,7 @@ describe('README.md', () => {
       if (!YOUR_CHANNEL_ACCESS_TOKEN) throw new Error('CHANNEL_ACCESS_TOKEN is not set')
       if (!YOUR_USER_ID) throw new Error('YOUR_USER_ID is not set')
       const markdownText = `
-# Fluits
+# Fruits
 * apple
 * banana
 * cherry
@@ -160,7 +160,7 @@ describe('README.md', () => {
         .then(({ flexBox }) => {
           const message = {
             type: "flex",
-            altText: 'Fluits',
+            altText: 'Fruits',
             contents: {
               type: "bubble",
               size: 'mega',
