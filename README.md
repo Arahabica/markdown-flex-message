@@ -153,9 +153,9 @@ convertToFlexMessage(markdownText, 'Typescript sample')
 
 ## Flex Bubble
 
-You can convert Markdown into a Flex Bubble, which allows you to use Markdown as part of a carousel
+You can convert Markdown into a Flex Bubble, which allows you to use Markdown as part of a carousel.
 
-###　Code
+### Code
 
 ```typescript
 import { convertToFlexBubble } from 'line-markdown'
@@ -215,6 +215,8 @@ convertToFlexBubble(markdownText, { size: 'micro' })
 ![Example4 Alt](docs/images/example4_alt.jpg)
 
 #### Talk Screen
+
+Markdown is applied as part of the carousel.
 
 ![Example4 Flex](docs/images/example4_flex.jpg)
 
@@ -278,8 +280,76 @@ convertToFlexBox(markdownText)
 
 #### Talk Screen
 
+A button is positioned below the Markdown.
+
 ![Example5 Flex](docs/images/example5_flex.jpg)
 
+# Methods
+
+### convertToFlexMessage(markdown, altText?, options?)
+
+Convert the markdown to a Flex Message.
+
+* **Parameters**
+    * **markdown**
+        * The Markdown content you want to convert.
+    * **altText** (Optional)
+        * Alternative text. The default value is `markdown`.
+    * **options.size** (Optional)
+        * The size of the Flex Bubble. Acceptable values are `nano`, `micro`, `deca`, `hecto`, `kilo`, `mega`, `giga`. The default value is `giga`.
+
+* **Return Value**
+    * **flexMessage**
+        * The object of the Flex Message.
+    * **textType**
+        * The type of text in the inputted markdown. Usually returns `markdown`. If it contains only code, it returns `code`, and for content without markdown elements, it returns `plain`.
+
+```typescript
+convertToFlexMessage(
+  markdown: string,
+  altText: string = 'markdown',
+  options: ConvertOptions = {}
+): Promise<{flexMessage: FlexMessage, textType: TextType}>
+```
+
+### convertToFlexBubble(markdown, options?)
+
+Convert the markdown to a Flex Message.
+
+* **Parameters**
+    * **markdown**
+        * The Markdown content you want to convert.
+    * **options.size** (Optional)
+        * The size of the Flex Bubble. Acceptable values are `nano`, `micro`, `deca`, `hecto`, `kilo`, `mega`, `giga`. The default value is `giga`.
+
+* **Return Value**
+    * **flexBubble**
+        * The object of the Flex Bubble.
+    * **textType**
+        * The type of text in the inputted markdown. Usually returns `markdown`. If it contains only code, it returns `code`, and for content without markdown elements, it returns `plain`.
+
+```typescript
+convertToFlexBubble(markdown: string, options: ConvertOptions = {}):
+   Promise<{flexBubble: FlexBubble, textType: TextType}>
+```
+
+### convertToFlexBox(markdown)
+
+Convert the markdown to a Flex Message.
+
+* **Parameters**
+    * **markdown**
+        * The Markdown content you want to convert.
+
+* **Return Value**
+    * **flexBox**
+        * The object of the Flex Box.
+    * **textType**
+        * The type of text in the inputted markdown. Usually returns `markdown`. If it contains only code, it returns `code`, and for content without markdown elements, it returns `plain`.
+
+```typescript
+convertToFlexBox(markdown: string): Promise<{ flexBox: FlexBox, textType: TextType }>
+```
 
 ## License
 
