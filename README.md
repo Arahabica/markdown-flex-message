@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="180" src="https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/line-markdown.png" alt="line-markdown logo">
+  <img width="180" src="docs/images/line-markdown.png" alt="line-markdown logo">
 </p>
 <p align="center">
   <a href="https://badge.fury.io/js/line-markdown" rel="nofollow"><img src="https://badge.fury.io/js/line-markdown.svg" alt="npm version"></a>
@@ -11,26 +11,26 @@
 
 line-markdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
 
-## Installation
+# Installation
 
 ```bash
 npm install line-markdown --save
 ```
 
-## Usage
+# Usage
 
-### Basic usage
+## Basic usage
 
 Convert the markdown to a Flex Message.
 
-#### Code
+### Code
 
 ```js
 import { convertToFlexMessage } from 'line-markdown'
 import * as line from '@line/bot-sdk'
 
 const markdownText = `
-# Fluits
+# Fruits
 * apple
 * banana
 * cherry
@@ -51,18 +51,236 @@ convertToFlexMessage(markdownText)
   })
 ```
 
-#### Result
+### Result
 
-**Talk List Screen**
-The alternative text is set to `markdown` by default, so the talk list screen will show `markdown`.
+#### Talk List Screen
 
-![Example1 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_alt.jpg)
+The default alternative text is `markdown`, so the talk list screen will display `markdown`.
 
-**Talk Screen**
-The size of the Flex message bubble is set to `giga` by default.
+![Example1 Alt](docs/images/example1_alt.jpg)
 
-![Example1 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_flex.jpg)
+#### Talk Screen
+
+The default size of the Flex message bubble is `giga`.
+
+![Example1 Flex](docs/images/example1_flex.jpg)
+
+## Custom Alternative text
+
+To set custom alternative text and set the bubble size to mega, use the following code.
+
+### Code
+
+```typescript
+import { convertToFlexMessage } from 'line-markdown'
+import * as line from '@line/bot-sdk'
+
+const markdownText = `
+# Fruits
+* apple
+* banana
+* cherry
+`.trim()
+
+convertToFlexMessage(markdownText, 'Fruits', { size: 'mega' })
+  .then(({ flexMessage }) => {
+    const client = new line.messagingApi.MessagingApiClient({
+      channelAccessToken: '{{YOUR_CHANNEL_ACCESS_TOKEN}}'
+    })
+    return client.pushMessage({
+      to: '{{YOUR_USER_ID}}',
+      messages: [flexMessage]
+    })
+  })
+
+```
+
+### Result
+
+#### Talk List Screen
+
+The alternative text is `Fruits`.
+
+![Example2 Alt](docs/images/example2_alt.jpg)
+
+#### Talk Screen
+
+The size of the Flex message bubble is set to `mega`.
+
+![Example2 Flex](docs/images/example2_flex.jpg)
+
+## Code Display
+
+`line-markdown` also supports the display of code.
+
+### Code
+
+```typescript
+import { convertToFlexMessage } from 'line-markdown'
+import * as line from '@line/bot-sdk'
+
+const markdownText =
+  [
+    '```typescript                                 ',
+    'const add = (a:number, b:number): number => { ',
+    '  return a + b                                ',
+    '}                                             ',
+    '```                                           '
+  ].join("\n")
+
+convertToFlexMessage(markdownText, 'Typescript sample')
+  .then(({ flexMessage, textType }) => {
+    console.log(textType) // => "code"
+    const client = new line.messagingApi.MessagingApiClient({
+      channelAccessToken: '{{YOUR_CHANNEL_ACCESS_TOKEN}}'
+    })
+    return client.pushMessage({
+      to: '{{YOUR_USER_ID}}',
+      messages: [flexMessage]
+    })
+  })
+```
+
+### Result
+
+#### Talk List Screen
+
+![Example3 Alt](docs/images/example3_alt.jpg)
+
+#### Talk Screen
+
+![Example3 Flex](docs/images/example3_flex.jpg)
+
+## Flex Bubble
+
+You can convert Markdown into a Flex Bubble, which allows you to use Markdown as part of a carousel
+
+###　Code
+
+```typescript
+import { convertToFlexBubble } from 'line-markdown'
+import * as line from '@line/bot-sdk'
+
+const markdownText = `
+# Fruits
+* apple
+* banana
+* cherry
+`.trim()
+convertToFlexBubble(markdownText, { size: 'micro' })
+  .then(({ flexBubble }) => {
+    const message = {
+      type: "flex",
+      altText: 'Fruits',
+      contents: {
+        type: 'carousel',
+        contents: [
+          flexBubble,
+          {
+            type: "bubble",
+            size: "micro",
+            body: {
+              type: "box",
+              layout: "vertical",
+              justifyContent: "center",
+              contents: [
+                {
+                  type: "button",
+                  action: {
+                    type: "uri",
+                    label: "Show more",
+                    uri: "http://linecorp.com/"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+    const client = new line.messagingApi.MessagingApiClient({
+      channelAccessToken: '{{YOUR_CHANNEL_ACCESS_TOKEN}}'
+    })
+    return client.pushMessage({
+      to: '{{YOUR_USER_ID}}',
+      messages: [message]
+    })
+  })
+```
+
+### Result
+
+#### Talk List Screen
+
+![Example4 Alt](docs/images/example4_alt.jpg)
+
+#### Talk Screen
+
+![Example4 Flex](docs/images/example4_flex.jpg)
+
+
+## Flex Box
+
+You can convert Markdown into a Flex Box. This allows you to use Markdown as part of a Flex Bubble.
+
+### Code
+
+```typescript
+import { convertToFlexBox } from 'line-markdown'
+import * as line from '@line/bot-sdk'
+
+const markdownText = `
+# Fruits
+* apple
+* banana
+* cherry
+`.trim()
+convertToFlexBox(markdownText)
+  .then(({ flexBox }) => {
+    const message = {
+      type: "flex",
+      altText: 'Fruits',
+      contents: {
+        type: "bubble",
+        size: 'mega',
+        body: {
+          type: "box",
+          layout: "vertical",
+          contents: [
+            flexBox,
+            {
+              type: "button",
+              action: {
+                type: "uri",
+                label: "Show more",
+                uri: "http://linecorp.com/"
+              }
+            }
+          ]
+        }
+      }
+    }
+    const client = new line.messagingApi.MessagingApiClient({
+      channelAccessToken: '{{YOUR_CHANNEL_ACCESS_TOKEN}}'
+    })
+    return client.pushMessage({
+      to: '{{YOUR_USER_ID}}',
+      messages: [message]
+    })
+  })
+```
+
+### Result
+
+#### Talk List Screen
+
+![Example5 Alt](docs/images/example5_alt.jpg)
+
+#### Talk Screen
+
+![Example5 Flex](docs/images/example5_flex.jpg)
+
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
