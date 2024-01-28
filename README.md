@@ -155,7 +155,9 @@ convertToFlexMessage(markdownText, 'Typescript sample')
 
 You can convert Markdown into a Flex Bubble, which allows you to use Markdown as part of a carousel
 
+
 ### Code
+
 
 ```typescript
 import { convertToFlexBubble } from 'line-markdown'
