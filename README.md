@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="180" src="docs/images/line-markdown.png" alt="line-markdown logo">
+  <img width="180" src="https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/line-markdown.png" alt="line-markdown logo">
 </p>
 <p align="center">
   <a href="https://badge.fury.io/js/line-markdown" rel="nofollow"><img src="https://badge.fury.io/js/line-markdown.svg" alt="npm version"></a>
@@ -57,13 +57,13 @@ convertToFlexMessage(markdownText)
 
 The default alternative text is `markdown`, so the talk list screen will display `markdown`.
 
-![Example1 Alt](docs/images/example1_alt.jpg)
+![Example1 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_alt.jpg)
 
 #### Talk Screen
 
 The default size of the Flex message bubble is `giga`.
 
-![Example1 Flex](docs/images/example1_flex.jpg)
+![Example1 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example1_flex.jpg)
 
 ## Custom Alternative text
 
@@ -101,13 +101,13 @@ convertToFlexMessage(markdownText, 'Fruits', { size: 'mega' })
 
 The alternative text is `Fruits`.
 
-![Example2 Alt](docs/images/example2_alt.jpg)
+![Example2 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example2_alt.jpg)
 
 #### Talk Screen
 
 The size of the Flex message bubble is set to `mega`.
 
-![Example2 Flex](docs/images/example2_flex.jpg)
+![Example2 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example2_flex.jpg)
 
 ## Code Display
 
@@ -145,11 +145,11 @@ convertToFlexMessage(markdownText, 'Typescript sample')
 
 #### Talk List Screen
 
-![Example3 Alt](docs/images/example3_alt.jpg)
+![Example3 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example3_alt.jpg)
 
 #### Talk Screen
 
-![Example3 Flex](docs/images/example3_flex.jpg)
+![Example3 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example3_flex.jpg)
 
 ## Flex Bubble
 
@@ -212,13 +212,13 @@ convertToFlexBubble(markdownText, { size: 'micro' })
 
 #### Talk List Screen
 
-![Example4 Alt](docs/images/example4_alt.jpg)
+![Example4 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example4_alt.jpg)
 
 #### Talk Screen
 
 Markdown is applied as part of the carousel.
 
-![Example4 Flex](docs/images/example4_flex.jpg)
+![Example4 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example4_flex.jpg)
 
 
 ## Flex Box
@@ -276,13 +276,13 @@ convertToFlexBox(markdownText)
 
 #### Talk List Screen
 
-![Example5 Alt](docs/images/example5_alt.jpg)
+![Example5 Alt](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example5_alt.jpg)
 
 #### Talk Screen
 
 A button is positioned below the Markdown.
 
-![Example5 Flex](docs/images/example5_flex.jpg)
+![Example5 Flex](https://raw.githubusercontent.com/Arahabica/line-markdown/main/docs/images/example5_flex.jpg)
 
 # Methods
 
