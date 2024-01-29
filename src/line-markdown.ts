@@ -7,6 +7,10 @@ export type ConvertOptions = {
   size?: "nano" | "micro" | "kilo" | "mega" | "giga"
 }
 
+export type ConvertFlexMessageOptions = {
+  altText?: string
+} & ConvertOptions
+
 /**
  * line-markdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
  */
@@ -21,18 +25,18 @@ export class LineMarkdown {
   /**
    * Convert markdown text to flex message
    * @param {string} markdown Markdown text
-   * @param {string|undefined} altText Alternative text for flex message. Default is 'markdown'.
    * @param {ConvertOptions|undefined} options Options for flex message
+   * @params {string|undefined} options.altText Alternative text for flex message. If not specified, it becomes the first 100 characters of the Markdown text.
    * @params {string|undefined} options.size Size of flex message. Default is 'giga'.
    * 
    * @returns {Promise<FlexMessage>} [Flex message](https://developers.line.biz/en/reference/messaging-api/#flex-message)
    */
   async convertToFlexMessage(
     markdown: string,
-    altText: string = 'markdown',
-    options: ConvertOptions = {}
+    options: ConvertFlexMessageOptions = {}
   ): Promise<{flexMessage: FlexMessage, textType: TextType}> {
     const { flexBubble, textType } = await this.convertToFlexBubble(markdown, options)
+    const altText = options.altText || markdown.slice(0, 100)
     const flexMessage: FlexMessage = {
       type: "flex",
       altText,
@@ -108,19 +112,18 @@ export class LineMarkdown {
 /**
  * Convert markdown text to flex message
  * @param {string} markdown Markdown text
- * @param {string|undefined} altText Alternative text for flex message. Default is 'markdown'.
  * @param {ConvertOptions|undefined} options Options for flex message
+ * @params {string|undefined} options.altText Alternative text for flex message. If not specified, it becomes the first 100 characters of the Markdown text.
  * @params {string|undefined} options.size Size of flex message. Default is 'giga'.
  * 
  * @returns {Promise<FlexMessage>} [Flex message](https://developers.line.biz/en/reference/messaging-api/#flex-message)
  */
 export const convertToFlexMessage = (
   markdown: string,
-  altText: string = 'markdown',
-  options: ConvertOptions = {}
+  options: ConvertFlexMessageOptions = {}
 ): Promise<{flexMessage: FlexMessage, textType: TextType}> => {
   const lineMarkdown = new LineMarkdown()
-  return lineMarkdown.convertToFlexMessage(markdown, altText, options)
+  return lineMarkdown.convertToFlexMessage(markdown, options)
 }
 
 /**

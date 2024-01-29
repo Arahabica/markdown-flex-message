@@ -33,7 +33,7 @@ describe('convertToFlexMessage', () => {
       const flexBubble = JSON.parse(json)
       expect(flexMessage).toEqual({
         type: 'flex',
-        altText: 'markdown',
+        altText: markdown.slice(0, 100),
         contents: flexBubble
       })
     }
@@ -41,7 +41,7 @@ describe('convertToFlexMessage', () => {
   it('alt_text', async () => {
     const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
     const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
-    const { flexMessage } = await convertToFlexMessage(markdown, 'Alternative text')
+    const { flexMessage } = await convertToFlexMessage(markdown, { altText: 'Alternative text' })
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexMessage, null, 2))
     } else {
