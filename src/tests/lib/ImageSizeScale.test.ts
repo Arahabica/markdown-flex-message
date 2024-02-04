@@ -4,7 +4,7 @@ import { ImageSizeScale } from '../../lib/ImageSizeScale'
 describe('ImageSizeScale', () => {
   describe('size', () => {
     it('jpg', async () => {
-      const imageUrl = "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=line-markdown"
+      const imageUrl = "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=markdown-flex-message"
       const res = await fetch(imageUrl)
       const arrayBuffer = await res.arrayBuffer()
       const buffer = Buffer.from(arrayBuffer)
@@ -14,7 +14,7 @@ describe('ImageSizeScale', () => {
       expect(size).toEqual({ width: 400, height: 100 })
     })
     it('pdf', async () => {
-      const imageUrl = "https://www.africau.edu/images/default/sample.pdf"
+      const imageUrl = "https://www.kansaigaidai.ac.jp/asp/img/pdf/82/7a79c35f7ce0704dec63be82440c8182.pdf"
       const res = await fetch(imageUrl)
       const arrayBuffer = await res.arrayBuffer()
       const buffer = Buffer.from(arrayBuffer)

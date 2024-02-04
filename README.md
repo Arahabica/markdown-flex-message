@@ -1,20 +1,20 @@
 <p align="center">
-  <img width="180" src="docs/images/line-markdown.png" alt="line-markdown logo">
+  <img width="180" src="https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/markdown-flex-message.png" alt="markdown-flex-message logo">
 </p>
 <p align="center">
-  <a href="https://badge.fury.io/js/line-markdown" rel="nofollow"><img src="https://badge.fury.io/js/line-markdown.svg" alt="npm version"></a>
-  <a href="https://github.com/Arahabica/line-markdown/actions/workflows/test.yml"><img src="https://github.com/Arahabica/line-markdown/actions/workflows/test.yml/badge.svg" alt="test"></a>
-  <a href="https://codecov.io/gh/Arahabica/line-markdown" rel="nofollow"><img src="https://codecov.io/gh/Arahabica/line-markdown/graph/badge.svg?token=ICO1VHV32M" alt="codecov""></a>
+  <a href="https://badge.fury.io/js/markdown-flex-message" rel="nofollow"><img src="https://badge.fury.io/js/markdown-flex-message.svg" alt="npm version"></a>
+  <a href="https://github.com/Arahabica/markdown-flex-message/actions/workflows/test.yml"><img src="https://github.com/Arahabica/markdown-flex-message/actions/workflows/test.yml/badge.svg" alt="test"></a>
+  <a href="https://codecov.io/gh/Arahabica/markdown-flex-message" rel="nofollow"><img src="https://codecov.io/gh/Arahabica/markdown-flex-message/graph/badge.svg?token=ICO1VHV32M" alt="codecov""></a>
 </p>
 
-# line-markdown
+# markdown-flex-message
 
-line-markdown is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
+markdown-flex-message is a converter that transforms Markdown into Flex Message for the LINE Messaging API.
 
 # Installation
 
 ```bash
-npm install line-markdown --save
+npm install markdown-flex-message --save
 ```
 
 # Usage
@@ -26,7 +26,7 @@ Convert the markdown to a Flex Message.
 ### Code
 
 ```js
-import { convertToFlexMessage } from 'line-markdown'
+import { convertToFlexMessage } from 'markdown-flex-message'
 import * as line from '@line/bot-sdk'
 
 const markdownText = `
@@ -57,13 +57,13 @@ convertToFlexMessage(markdownText)
 
 The default alternative text is `markdown`, so the talk list screen will display `markdown`.
 
-![Example1 Alt](docs/images/example1_alt.jpg)
+![Example1 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example1_alt.jpg)
 
 #### Talk Screen
 
 The default size of the Flex message bubble is `giga`.
 
-![Example1 Flex](docs/images/example1_flex.jpg)
+![Example1 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example1_flex.jpg)
 
 ## Custom Alternative text
 
@@ -72,7 +72,7 @@ To set custom alternative text and set the bubble size to mega, use the followin
 ### Code
 
 ```typescript
-import { convertToFlexMessage } from 'line-markdown'
+import { convertToFlexMessage } from 'markdown-flex-message'
 import * as line from '@line/bot-sdk'
 
 const markdownText = `
@@ -101,22 +101,22 @@ convertToFlexMessage(markdownText, 'Fruits', { size: 'mega' })
 
 The alternative text is `Fruits`.
 
-![Example2 Alt](docs/images/example2_alt.jpg)
+![Example2 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example2_alt.jpg)
 
 #### Talk Screen
 
 The size of the Flex message bubble is set to `mega`.
 
-![Example2 Flex](docs/images/example2_flex.jpg)
+![Example2 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example2_flex.jpg)
 
 ## Code Display
 
-`line-markdown` also supports the display of code.
+`markdown-flex-message` also supports the display of code.
 
 ### Code
 
 ```typescript
-import { convertToFlexMessage } from 'line-markdown'
+import { convertToFlexMessage } from 'markdown-flex-message'
 import * as line from '@line/bot-sdk'
 
 const markdownText =
@@ -145,11 +145,11 @@ convertToFlexMessage(markdownText, 'Typescript sample')
 
 #### Talk List Screen
 
-![Example3 Alt](docs/images/example3_alt.jpg)
+![Example3 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example3_alt.jpg)
 
 #### Talk Screen
 
-![Example3 Flex](docs/images/example3_flex.jpg)
+![Example3 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example3_flex.jpg)
 
 ## Flex Bubble
 
@@ -158,7 +158,7 @@ You can convert Markdown into a Flex Bubble, which allows you to use Markdown as
 ### Code
 
 ```typescript
-import { convertToFlexBubble } from 'line-markdown'
+import { convertToFlexBubble } from 'markdown-flex-message'
 import * as line from '@line/bot-sdk'
 
 const markdownText = `
@@ -212,13 +212,13 @@ convertToFlexBubble(markdownText, { size: 'micro' })
 
 #### Talk List Screen
 
-![Example4 Alt](docs/images/example4_alt.jpg)
+![Example4 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example4_alt.jpg)
 
 #### Talk Screen
 
 Markdown is applied as part of the carousel.
 
-![Example4 Flex](docs/images/example4_flex.jpg)
+![Example4 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example4_flex.jpg)
 
 
 ## Flex Box
@@ -228,7 +228,7 @@ You can convert Markdown into a Flex Box. This allows you to use Markdown as par
 ### Code
 
 ```typescript
-import { convertToFlexBox } from 'line-markdown'
+import { convertToFlexBox } from 'markdown-flex-message'
 import * as line from '@line/bot-sdk'
 
 const markdownText = `
@@ -276,13 +276,13 @@ convertToFlexBox(markdownText)
 
 #### Talk List Screen
 
-![Example5 Alt](docs/images/example5_alt.jpg)
+![Example5 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example5_alt.jpg)
 
 #### Talk Screen
 
 A button is positioned below the Markdown.
 
-![Example5 Flex](docs/images/example5_flex.jpg)
+![Example5 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example5_flex.jpg)
 
 # Methods
 
