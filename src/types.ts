@@ -1,7 +1,16 @@
 import { Token } from "marked"
 import { FlexComponent, FlexSpan, FlexText } from "@line/bot-sdk"
 
+export * from "./MarkdownFlexMessage"
 export * from "./markdown-flex-message"
+
+export type ConvertOptions = {
+  size?: "nano" | "micro" | "kilo" | "mega" | "giga"
+}
+
+export type ConvertFlexMessageOptions = {
+  altText?: string
+} & ConvertOptions
 
 export interface FlexConverter {
   convert(token: Token): Promise<FlexComponent[]>

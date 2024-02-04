@@ -55,7 +55,7 @@ convertToFlexMessage(markdownText)
 
 #### Talk List Screen
 
-The default alternative text is `markdown`, so the talk list screen will display `markdown`.
+If an alternative text is not specified, it becomes the first 100 characters of the Markdown text
 
 ![Example1 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example1_alt.jpg)
 
@@ -82,7 +82,7 @@ const markdownText = `
 * cherry
 `.trim()
 
-convertToFlexMessage(markdownText, 'Fruits', { size: 'mega' })
+convertToFlexMessage(markdownText, { altText: 'Fruits', size: 'mega' })
   .then(({ flexMessage }) => {
     const client = new line.messagingApi.MessagingApiClient({
       channelAccessToken: '{{YOUR_CHANNEL_ACCESS_TOKEN}}'
@@ -128,7 +128,7 @@ const markdownText =
     '```                                           '
   ].join("\n")
 
-convertToFlexMessage(markdownText, 'Typescript sample')
+convertToFlexMessage(markdownText, { altText: 'Typescript sample' })
   .then(({ flexMessage, textType }) => {
     console.log(textType) // => "code"
     const client = new line.messagingApi.MessagingApiClient({
@@ -286,15 +286,15 @@ A button is positioned below the Markdown.
 
 # Methods
 
-### convertToFlexMessage(markdown, altText?, options?)
+### convertToFlexMessage(markdown, options)
 
 Convert the markdown to a Flex Message.
 
 * **Parameters**
     * **markdown**
         * The Markdown content you want to convert.
-    * **altText** (Optional)
-        * Alternative text. The default value is `markdown`.
+    * **options.altText** (Optional)
+        * Alternative text for flex message. If not specified, it becomes the first 100 characters of the Markdown text.
     * **options.size** (Optional)
         * The size of the Flex Bubble. Acceptable values are `nano`, `micro`, `deca`, `hecto`, `kilo`, `mega`, `giga`. The default value is `giga`.
 
@@ -307,12 +307,11 @@ Convert the markdown to a Flex Message.
 ```typescript
 convertToFlexMessage(
   markdown: string,
-  altText: string = 'markdown',
   options: ConvertOptions = {}
 ): Promise<{flexMessage: FlexMessage, textType: TextType}>
 ```
 
-### convertToFlexBubble(markdown, options?)
+### convertToFlexBubble(markdown, options)
 
 Convert the markdown to a Flex Message.
 
