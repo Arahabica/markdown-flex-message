@@ -44,7 +44,7 @@ describe('README.md', () => {
 * banana
 * cherry
 `.trim()
-      convertToFlexMessage(markdownText, 'Fruits', { size: 'mega' })
+      convertToFlexMessage(markdownText, { altText: 'Fruits', size: 'mega' })
         .then(({ flexMessage }) => {
           const client = new line.messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
@@ -73,7 +73,7 @@ describe('README.md', () => {
           '}                                             ',
           '```                                           '
         ].join("\n")
-      convertToFlexMessage(markdownText, 'Typescript sample')
+      convertToFlexMessage(markdownText, { altText: 'Typescript sample' })
         .then(({ flexMessage }) => {
           const client = new line.messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
