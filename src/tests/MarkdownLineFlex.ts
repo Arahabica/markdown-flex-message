@@ -1,21 +1,21 @@
 import {
-  LineMarkdown,
+  MarkdownFlexMessage,
   convertToFlexMessage,
   convertToFlexBubble,
   convertToFlexBox
-} from '../line-markdown'
+} from '../markdown-flex-message'
 import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
 
 const dir = join(__dirname, 'resources', 'markdown')
-describe('LineMarkdown', () => {
-  describe('LineMarkdown#convert', () => {
+describe('MarkdownFlexMessage', () => {
+  describe('MarkdownFlexMessage#convert', () => {
     it('should return an array of tokens', async () => {
       const markdown = await fsPromises.readFile(join(dir, '01hello.md'), 'utf-8')
       const json = await fsPromises.readFile(join(dir, '01hello.json'), 'utf-8')
-      const lineMarkdown = new LineMarkdown()
-      const { flexBubble } = await lineMarkdown.convertToFlexBubble(markdown)
+      const markdownFlexMessage = new MarkdownFlexMessage()
+      const { flexBubble } = await markdownFlexMessage.convertToFlexBubble(markdown)
       // console.log(JSON.stringify(flexContainer, null, 2))
       expect(flexBubble.type).toEqual('bubble')
       expect(flexBubble).toEqual(JSON.parse(json))
