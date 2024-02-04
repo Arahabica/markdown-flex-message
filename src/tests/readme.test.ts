@@ -1,6 +1,6 @@
 import { it, describe } from 'vitest'
 import * as line from '@line/bot-sdk'
-import { convertToFlexMessage, convertToFlexBubble, convertToFlexBox } from "../line-markdown"
+import { convertToFlexMessage, convertToFlexBubble, convertToFlexBox } from "../markdown-flex-message"
 
 describe('README.md', () => {
   const YOUR_CHANNEL_ACCESS_TOKEN = process.env.CHANNEL_ACCESS_TOKEN
