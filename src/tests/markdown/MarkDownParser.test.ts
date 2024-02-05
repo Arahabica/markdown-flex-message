@@ -126,5 +126,18 @@ hello **World**!
       const { textType } = parser.parse(markdown)
       expect(textType).toEqual('markdown')
     })
+    it('bold', () => {
+      const parser = new MarkDownParser()
+
+      const markdown = `
+**A**
+
+**B**
+
+hello
+`.trim()
+      const { textType } = parser.parse(markdown)
+      expect(textType).toEqual('markdown')
+    })
   })
 })
