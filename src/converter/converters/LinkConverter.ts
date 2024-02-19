@@ -1,9 +1,8 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 
 export class LinkConverter implements FlexConverter {
-  async convert(token: Tokens.Link): Promise<FlexComponent[]> {
+  async convert(token: Tokens.Link): Promise<KnownFlexComponent[]> {
     const { href, text } = token
     return [{
       type: 'text',
