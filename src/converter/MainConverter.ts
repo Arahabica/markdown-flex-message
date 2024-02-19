@@ -1,6 +1,5 @@
 import { Token } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../types"
+import { FlexConverter, KnownFlexComponent } from "../types"
 import { ConverterFactory } from "./ConverterFactory"
 
 export class MainConverter implements FlexConverter {
@@ -8,7 +7,7 @@ export class MainConverter implements FlexConverter {
   constructor() {
     this.factory = new ConverterFactory()
   }
-  async convert(token: Token): Promise<FlexComponent[]> {
+  async convert(token: Token): Promise<KnownFlexComponent[]> {
     const converter = this.factory.create(token)
     return converter.convert(token)
   }

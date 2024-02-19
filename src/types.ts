@@ -1,5 +1,5 @@
 import { Token } from "marked"
-import { FlexComponent, FlexSpan, FlexText } from "@line/bot-sdk"
+import { messagingApi } from "@line/bot-sdk"
 
 export * from "./MarkdownFlexMessage"
 export * from "./markdown-flex-message"
@@ -13,12 +13,23 @@ export type ConvertFlexMessageOptions = {
 } & ConvertOptions
 
 export interface FlexConverter {
-  convert(token: Token): Promise<FlexComponent[]>
+  convert(token: Token): Promise<KnownFlexComponent[]>
 }
 
 export type TextType = 'markdown' | 'code' | 'plain'
 
-export type DecoratableFlex = FlexSpan | FlexText
+export type DecoratableFlex = messagingApi.FlexSpan | messagingApi.FlexText
+
+export type KnownFlexComponent = 
+  messagingApi.FlexBox |
+  messagingApi.FlexButton |
+  messagingApi.FlexFiller | 
+  messagingApi.FlexIcon |
+  messagingApi.FlexImage |
+  messagingApi.FlexSeparator |
+  messagingApi.FlexSpan |
+  messagingApi.FlexText |
+  messagingApi.FlexVideo
 
 export type CodeTokenType =
   "keyword" |

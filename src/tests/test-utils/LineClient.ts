@@ -1,4 +1,4 @@
-import { Message } from "@line/bot-sdk"
+import { messagingApi } from "@line/bot-sdk"
 
 type LineClientConfig = {
   channelAccessToken: string
@@ -29,7 +29,7 @@ export class LineClient {
   constructor(config: LineClientConfig) {
     this.config = config
   }
-  async validateReplyMessages(messages: Message[]): Promise<ValidateReplyMessagesResponse> {
+  async validateReplyMessages(messages: messagingApi.Message[]): Promise<ValidateReplyMessagesResponse> {
     const { endpoint } = this
     const { channelAccessToken } = this.config
     const url = `${endpoint}/message/validate/reply`

@@ -1,6 +1,6 @@
 import { Tokens } from "marked"
-import { FlexComponent, FlexSpan, FlexText } from "@line/bot-sdk"
-import { CodeHighlightTheme, FlexConverter } from "../../types"
+import { FlexSpan, FlexText } from "@line/bot-sdk"
+import { CodeHighlightTheme, FlexConverter, KnownFlexComponent } from "../../types"
 import { CodeParser } from "../../code/CodeParser"
 
 export class CodeConverter implements FlexConverter {
@@ -12,8 +12,8 @@ export class CodeConverter implements FlexConverter {
     this.theme = theme
   }
 
-  async convert(token: Tokens.Code): Promise<FlexComponent[]> {
-    const component: FlexComponent = {
+  async convert(token: Tokens.Code): Promise<KnownFlexComponent[]> {
+    const component: KnownFlexComponent = {
       type: "box",
       layout: "vertical",
       backgroundColor: this.theme.codeBackgroundColor,
@@ -27,8 +27,8 @@ export class CodeConverter implements FlexConverter {
     component.contents.push(codeComponent)
     return [component]
   }
-  async getCodeComponent(text: string, language: string | undefined): Promise<FlexComponent> {
-    const box: FlexComponent = {
+  async getCodeComponent(text: string, language: string | undefined): Promise<KnownFlexComponent> {
+    const box: KnownFlexComponent = {
       type: "box",
       layout: "vertical",
       paddingAll: "6px",
@@ -86,7 +86,7 @@ export class CodeConverter implements FlexConverter {
       contents: spans
     }
   }
-  private getTitleComponent(text: string): FlexComponent {
+  private getTitleComponent(text: string): KnownFlexComponent {
     return {
       type: "box",
       layout: "vertical",

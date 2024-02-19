@@ -1,9 +1,8 @@
 import { Token } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 
 export class GenericConverter implements FlexConverter {
-  async convert(token: Token): Promise<FlexComponent[]> {
+  async convert(token: Token): Promise<KnownFlexComponent[]> {
     const text = token.raw
     return [{
       type: 'text',
