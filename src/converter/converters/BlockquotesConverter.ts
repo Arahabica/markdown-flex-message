@@ -1,6 +1,5 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 import { MainConverter } from "../MainConverter"
 
 export class BlockquoteConverter implements FlexConverter {
@@ -8,9 +7,9 @@ export class BlockquoteConverter implements FlexConverter {
   private readonly textColor = "#666979"
   private readonly borderWidth = "3px"
 
-  async convert(token: Tokens.Blockquote): Promise<FlexComponent[]> {
+  async convert(token: Tokens.Blockquote): Promise<KnownFlexComponent[]> {
     const mainConverter = new MainConverter()
-    const childContents: FlexComponent[] = []
+    const childContents: KnownFlexComponent[] = []
     for(const childToken of token.tokens) {
       const contents = await mainConverter.convert(childToken)
       childContents.push(...contents)
@@ -20,7 +19,7 @@ export class BlockquoteConverter implements FlexConverter {
         content.color = this.textColor
       }
     })
-    const component: FlexComponent = {
+    const component: KnownFlexComponent = {
       type: 'box',
       layout: 'horizontal',
       backgroundColor: this.borderColor,

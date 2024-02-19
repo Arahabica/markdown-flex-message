@@ -1,9 +1,8 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 
 export class HeadingConverter implements FlexConverter {
-  async convert(token: Tokens.Heading | Tokens.Generic): Promise<FlexComponent[]> {
+  async convert(token: Tokens.Heading | Tokens.Generic): Promise<KnownFlexComponent[]> {
     const text = token.text
     let size = "md"
     let paddingBottom = "sm"
@@ -15,7 +14,7 @@ export class HeadingConverter implements FlexConverter {
       size = "lg"
       paddingBottom = "md"
     }
-    const component: FlexComponent = {
+    const component: KnownFlexComponent = {
       type: "box",
       layout: "vertical",
       contents: [

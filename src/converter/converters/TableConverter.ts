@@ -1,6 +1,5 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 import { InlineConverter } from "./InlineConverter"
 
 export class TableConverter implements FlexConverter {
@@ -12,8 +11,8 @@ export class TableConverter implements FlexConverter {
     this.inlineConverter = new InlineConverter()
   }
 
-  async convert(token: Tokens.Table): Promise<FlexComponent[]> {
-    const contents: FlexComponent[] = []
+  async convert(token: Tokens.Table): Promise<KnownFlexComponent[]> {
+    const contents: KnownFlexComponent[] = []
     let rowIndex: number = 0
     const aligns = token.align
     for (const row of token.rows) {
@@ -21,7 +20,7 @@ export class TableConverter implements FlexConverter {
         type: 'separator',
         margin: 'md'
       })
-      const rowComponent: FlexComponent = {
+      const rowComponent: KnownFlexComponent = {
         type: 'box',
         layout: 'vertical',
         spacing: 'sm',
@@ -32,7 +31,7 @@ export class TableConverter implements FlexConverter {
         const align = aligns[cellIndex] || ''
         const headerCell = await this.headerCell(token.header[cellIndex])
         const bodyCell = await this.bodyCell(cell, align)
-        const cellComponent: FlexComponent = {
+        const cellComponent: KnownFlexComponent = {
           type: 'box',
           layout: 'horizontal',
           spacing: 'md',
@@ -52,7 +51,7 @@ export class TableConverter implements FlexConverter {
     }
     return contents
   }
-  private async headerCell(cell: Tokens.TableCell | undefined): Promise<FlexComponent> {
+  private async headerCell(cell: Tokens.TableCell | undefined): Promise<KnownFlexComponent> {
     const tokens = cell?.tokens || []
     const contents = await this.inlineConverter.convert(tokens)
     for (const content of contents) {
@@ -72,7 +71,7 @@ export class TableConverter implements FlexConverter {
       contents
     }
   }
-  private async bodyCell(cell: Tokens.TableCell | undefined, align: string): Promise<FlexComponent> {
+  private async bodyCell(cell: Tokens.TableCell | undefined, align: string): Promise<KnownFlexComponent> {
     const tokens = cell?.tokens || []
     const contents = await this.inlineConverter.convert(tokens)
     for (const content of contents) {

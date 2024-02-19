@@ -1,6 +1,5 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 import { InlineConverter } from "./InlineConverter"
 
 export class ListConverter implements FlexConverter {
@@ -11,8 +10,8 @@ export class ListConverter implements FlexConverter {
   constructor() {
     this.inlineConverter = new InlineConverter()
   }
-  async convert(token: Tokens.List): Promise<FlexComponent[]> {
-    const components: FlexComponent[] = []
+  async convert(token: Tokens.List): Promise<KnownFlexComponent[]> {
+    const components: KnownFlexComponent[] = []
     const marginLeft = this.calculateMarginLeft(token)
     // token.items.forEach((item, index) => {
     let index = 0
@@ -38,7 +37,7 @@ export class ListConverter implements FlexConverter {
     }
     return components
   }
-  private generateMarker(token: Tokens.List, index: number): FlexComponent {
+  private generateMarker(token: Tokens.List, index: number): KnownFlexComponent {
     if (token.ordered) {
       const number = (token.start || 0) + index
       return this.generateOrderedMarker(token, number)
@@ -46,7 +45,7 @@ export class ListConverter implements FlexConverter {
       return this.generateUnorderedMarker()
     }
   }
-  private generateUnorderedMarker(): FlexComponent {
+  private generateUnorderedMarker(): KnownFlexComponent {
     return {
       type: 'box',
       layout: 'vertical',
@@ -59,7 +58,7 @@ export class ListConverter implements FlexConverter {
       contents: []
     }
   }
-  private generateOrderedMarker(token: Tokens.List, index: number): FlexComponent {
+  private generateOrderedMarker(token: Tokens.List, index: number): KnownFlexComponent {
     const width = this.calculateOrderedMarkerWidth(token)
     const lastDigit = index % 10
     // The positions of 1 and 7 are adjusted due to their narrow character widths.

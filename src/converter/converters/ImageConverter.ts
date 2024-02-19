@@ -1,6 +1,6 @@
 import { Tokens } from "marked"
-import { FlexComponent, FlexImage } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { messagingApi } from "@line/bot-sdk"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 import { ImageSizeScale } from "../../lib/ImageSizeScale"
 
 export class ImageConverter implements FlexConverter {
@@ -10,10 +10,10 @@ export class ImageConverter implements FlexConverter {
     this.imageSizeScale = new ImageSizeScale()
   }
 
-  async convert(token: Tokens.Image): Promise<FlexComponent[]> {
+  async convert(token: Tokens.Image): Promise<KnownFlexComponent[]> {
     const url = token.href
     const aspectRatio = await this.calulateAspectRatio(url)
-    const component: FlexImage = {
+    const component: messagingApi.FlexImage = {
       type: 'image',
       url,
       aspectRatio,

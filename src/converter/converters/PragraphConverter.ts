@@ -1,6 +1,5 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 import { InlineConverter } from "./InlineConverter"
 
 export class ParagraphConverter implements FlexConverter {
@@ -9,7 +8,7 @@ export class ParagraphConverter implements FlexConverter {
   constructor() {
     this.inlineConverter = new InlineConverter()
   }
-  async convert(token: Tokens.Paragraph): Promise<FlexComponent[]> {
+  async convert(token: Tokens.Paragraph): Promise<KnownFlexComponent[]> {
     return this.inlineConverter.convert(token.tokens)
   }
 }

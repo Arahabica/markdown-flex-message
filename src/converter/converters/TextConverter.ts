@@ -1,10 +1,9 @@
 import { Tokens } from "marked"
-import { FlexComponent } from "@line/bot-sdk"
-import { FlexConverter } from "../../types"
+import { FlexConverter, KnownFlexComponent } from "../../types"
 import { MainConverter } from "../MainConverter"
 
 export class TextConverter implements FlexConverter {
-  async convert(token: Tokens.Text): Promise<FlexComponent[]> {
+  async convert(token: Tokens.Text): Promise<KnownFlexComponent[]> {
     if (token.tokens) {
       const promises = token.tokens.map(childToken => {
         const mainConverter = new MainConverter()
