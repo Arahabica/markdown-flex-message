@@ -20,7 +20,7 @@ export class MarkDownParser {
       return 'code'
     }
     for(const token of tokensList) {
-      if (!(token.type === 'paragraph' && token.tokens?.length === 1) && token.type !== 'space') {
+      if (!(token.type === 'paragraph' && token.tokens?.length === 1 && token.tokens[0].type === 'text') && token.type !== 'space') {
         return 'markdown'
       }
     }
