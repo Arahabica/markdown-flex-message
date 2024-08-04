@@ -2,7 +2,7 @@ import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
 import { LineClient } from './test-utils/LineClient'
-import { FlexMessage } from '@line/bot-sdk'
+import { messagingApi } from '@line/bot-sdk'
 
 
 const dir = join(__dirname, 'resources', 'markdown')
@@ -18,8 +18,8 @@ describe('validation', () => {
     expect(messageFileList.length).toBeGreaterThan(0)
     for(const messageFile of messageFileList) {
       const message = await fsPromises.readFile(join(dir, messageFile), 'utf-8')
-      const m: FlexMessage = {
-        type: 'flex',
+      const m: messagingApi.FlexMessage = {
+        type: 'flex' as const,
         altText: 'hello',
         contents: JSON.parse(message)
       }

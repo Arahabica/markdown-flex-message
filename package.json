@@ -1,6 +1,6 @@
 {
   "name": "markdown-flex-message",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "markdown-flex-message is a converter that transforms Markdown into Flex Message for the LINE Messaging API.",
   "main": "dist/markdown-flex-message.js",
   "types": "dist/types.d.ts",
@@ -26,7 +26,7 @@
     "vitest": "^1.3.0"
   },
   "dependencies": {
-    "@line/bot-sdk": "^8.4.0",
+    "@line/bot-sdk": "^9.2.0",
     "image-size": "^1.1.0",
     "marked": "^11.2.0",
     "prismjs": "^1.29.0"
