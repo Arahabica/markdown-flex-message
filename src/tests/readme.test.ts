@@ -1,5 +1,6 @@
 import { it, describe } from 'vitest'
-import * as line from '@line/bot-sdk'
+// import * as line from '@line/bot-sdk'
+import { messagingApi } from '@line/bot-sdk'
 import { convertToFlexMessage, convertToFlexBubble, convertToFlexBox } from "../markdown-flex-message"
 
 describe('README.md', () => {
@@ -19,7 +20,7 @@ describe('README.md', () => {
 `.trim()
       convertToFlexMessage(markdownText)
         .then(({ flexMessage }) => {
-          const client = new line.messagingApi.MessagingApiClient({
+          const client = new messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
           })
           return client.pushMessage({
@@ -46,7 +47,7 @@ describe('README.md', () => {
 `.trim()
       convertToFlexMessage(markdownText, { altText: 'Fruits', size: 'mega' })
         .then(({ flexMessage }) => {
-          const client = new line.messagingApi.MessagingApiClient({
+          const client = new messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
           })
           return client.pushMessage({
@@ -75,7 +76,7 @@ describe('README.md', () => {
         ].join("\n")
       convertToFlexMessage(markdownText, { altText: 'Typescript sample' })
         .then(({ flexMessage }) => {
-          const client = new line.messagingApi.MessagingApiClient({
+          const client = new messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
           })
           return client.pushMessage({
@@ -103,24 +104,24 @@ describe('README.md', () => {
       convertToFlexBubble(markdownText, { size: 'micro' })
         .then(({ flexBubble }) => {
           const message = {
-            type: "flex",
+            type: "flex" as const,
             altText: 'Fruits',
             contents: {
-              type: 'carousel',
+              type: 'carousel' as const,
               contents: [
                 flexBubble,
                 {
-                  type: "bubble",
-                  size: "micro",
+                  type: "bubble" as const,
+                  size: "micro" as const,
                   body: {
-                    type: "box",
-                    layout: "vertical",
-                    justifyContent: "center",
+                    type: "box" as const,
+                    layout: "vertical" as const,
+                    justifyContent: "center" as const,
                     contents: [
                       {
-                        type: "button",
+                        type: "button" as const,
                         action: {
-                          type: "uri",
+                          type: "uri" as const,
                           label: "Show more",
                           uri: "http://linecorp.com/"
                         }
@@ -131,7 +132,7 @@ describe('README.md', () => {
               ]
             }
           }
-          const client = new line.messagingApi.MessagingApiClient({
+          const client = new messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
           })
           return client.pushMessage({
@@ -159,20 +160,20 @@ describe('README.md', () => {
       convertToFlexBox(markdownText)
         .then(({ flexBox }) => {
           const message = {
-            type: "flex",
+            type: "flex" as const,
             altText: 'Fruits',
             contents: {
-              type: "bubble",
-              size: 'mega',
+              type: "bubble" as const,
+              size: 'mega' as const,
               body: {
-                type: "box",
-                layout: "vertical",
+                type: "box" as const,
+                layout: "vertical" as const,
                 contents: [
                   flexBox,
                   {
-                    type: "button",
+                    type: "button" as const,
                     action: {
-                      type: "uri",
+                      type: "uri" as const,
                       label: "Show more",
                       uri: "http://linecorp.com/"
                     }
@@ -181,7 +182,7 @@ describe('README.md', () => {
               }
             }
           }
-          const client = new line.messagingApi.MessagingApiClient({
+          const client = new messagingApi.MessagingApiClient({
             channelAccessToken: YOUR_CHANNEL_ACCESS_TOKEN
           })
           return client.pushMessage({

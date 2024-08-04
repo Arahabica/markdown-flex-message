@@ -1,5 +1,5 @@
 import { Tokens } from "marked"
-import { FlexSpan, FlexText } from "@line/bot-sdk"
+import { messagingApi } from "@line/bot-sdk"
 import { CodeHighlightTheme, FlexConverter, KnownFlexComponent } from "../../types"
 import { CodeParser } from "../../code/CodeParser"
 
@@ -47,8 +47,8 @@ export class CodeConverter implements FlexConverter {
     }
     return box
   }
-  private async getTokenComponents(text: string, language: string): Promise<FlexSpan[]> {
-    const components: FlexSpan[] = []
+  private async getTokenComponents(text: string, language: string): Promise<messagingApi.FlexSpan[]> {
+    const components: messagingApi.FlexSpan[] = []
     const tokens = await this.parser.parse(text, language)
     tokens.forEach((token) => {
       const style = this.theme.highlight(token)
@@ -68,7 +68,7 @@ export class CodeConverter implements FlexConverter {
     })
     return components
   }
-  private simpleCodeTextComponent(text: string): FlexText {
+  private simpleCodeTextComponent(text: string): messagingApi.FlexText {
     return {
       type: "text",
       text,
@@ -77,7 +77,7 @@ export class CodeConverter implements FlexConverter {
       color: this.theme.codeTextColor
     }
   }
-  private highlitedCodeTextComponent(spans: FlexSpan[]): FlexText {
+  private highlitedCodeTextComponent(spans: messagingApi.FlexSpan[]): messagingApi.FlexText {
     return {
       type: "text",
       size: "xs",

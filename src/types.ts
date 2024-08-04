@@ -74,7 +74,7 @@ export type CodeToken = {
 export type CodeTokenStyle = {
   color?: string
   opacity?: number
-  fontWeight?: 'bold' | 'normal'
+  fontWeight?: 'bold' | 'regular'
   fontStyle?: 'italic' | 'normal'
 }
 
