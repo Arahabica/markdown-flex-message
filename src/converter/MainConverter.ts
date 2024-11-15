@@ -1,6 +1,6 @@
-import { Token } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../types"
-import { ConverterFactory } from "./ConverterFactory"
+import { Token } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../types'
+import { ConverterFactory } from './ConverterFactory'
 
 export class MainConverter implements FlexConverter {
   factory: ConverterFactory

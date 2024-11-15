@@ -1,31 +1,32 @@
-import { Tokens } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../../types"
+import { Tokens } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../../types'
 
 export class HeadingConverter implements FlexConverter {
-  async convert(token: Tokens.Heading | Tokens.Generic): Promise<KnownFlexComponent[]> {
+  async convert(
+    token: Tokens.Heading | Tokens.Generic,
+  ): Promise<KnownFlexComponent[]> {
     const text = token.text
-    let size = "md"
-    let paddingBottom = "sm"
+    let size = 'md'
+    let paddingBottom = 'sm'
     if (token.depth === 1) {
-      size = "xl"
-      paddingBottom = "lg"
-    }
-    else if (token.depth === 2) {
-      size = "lg"
-      paddingBottom = "md"
+      size = 'xl'
+      paddingBottom = 'lg'
+    } else if (token.depth === 2) {
+      size = 'lg'
+      paddingBottom = 'md'
     }
     const component: KnownFlexComponent = {
-      type: "box",
-      layout: "vertical",
+      type: 'box',
+      layout: 'vertical',
       contents: [
         {
-          type: "text",
+          type: 'text',
           text,
-          weight: "bold",
-          size
-        }
+          weight: 'bold',
+          size,
+        },
       ],
-      paddingBottom
+      paddingBottom,
     }
     return [component]
   }

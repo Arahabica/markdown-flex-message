@@ -4,7 +4,6 @@ import { join } from 'path'
 import { LineClient } from './test-utils/LineClient'
 import { messagingApi } from '@line/bot-sdk'
 
-
 const dir = join(__dirname, 'resources', 'markdown')
 describe('validation', () => {
   const channelAccessToken = process.env.CHANNEL_ACCESS_TOKEN
@@ -16,12 +15,12 @@ describe('validation', () => {
     const fileList = await fsPromises.readdir(dir)
     const messageFileList = fileList.filter((file) => file.endsWith('.json'))
     expect(messageFileList.length).toBeGreaterThan(0)
-    for(const messageFile of messageFileList) {
+    for (const messageFile of messageFileList) {
       const message = await fsPromises.readFile(join(dir, messageFile), 'utf-8')
       const m: messagingApi.FlexMessage = {
         type: 'flex' as const,
         altText: 'hello',
-        contents: JSON.parse(message)
+        contents: JSON.parse(message),
       }
       const response = await lineClient.validateReplyMessages([m])
       if (response.status === 'failure') {

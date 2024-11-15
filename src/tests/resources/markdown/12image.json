@@ -24,8 +24,8 @@
       },
       {
         "type": "image",
-        "url": "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=markdown-flex-message",
-        "aspectRatio": "4:1",
+        "url": "https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/markdown-flex-message.png",
+        "aspectRatio": "1:1",
         "size": "full"
       },
       {

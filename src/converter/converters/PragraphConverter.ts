@@ -1,6 +1,6 @@
-import { Tokens } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../../types"
-import { InlineConverter } from "./InlineConverter"
+import { Tokens } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../../types'
+import { InlineConverter } from './InlineConverter'
 
 export class ParagraphConverter implements FlexConverter {
   private readonly inlineConverter: InlineConverter

@@ -1,7 +1,11 @@
-import { Tokens } from "marked"
-import { messagingApi } from "@line/bot-sdk"
-import { CodeHighlightTheme, FlexConverter, KnownFlexComponent } from "../../types"
-import { CodeParser } from "../../code/CodeParser"
+import { Tokens } from 'marked'
+import { messagingApi } from '@line/bot-sdk'
+import {
+  CodeHighlightTheme,
+  FlexConverter,
+  KnownFlexComponent,
+} from '../../types'
+import { CodeParser } from '../../code/CodeParser'
 
 export class CodeConverter implements FlexConverter {
   private readonly parser: CodeParser
@@ -14,11 +18,11 @@ export class CodeConverter implements FlexConverter {
 
   async convert(token: Tokens.Code): Promise<KnownFlexComponent[]> {
     const component: KnownFlexComponent = {
-      type: "box",
-      layout: "vertical",
+      type: 'box',
+      layout: 'vertical',
       backgroundColor: this.theme.codeBackgroundColor,
-      cornerRadius: "6px",
-      contents: []
+      cornerRadius: '6px',
+      contents: [],
     }
     if (token.lang) {
       component.contents.push(this.getTitleComponent(token.lang))
@@ -27,12 +31,15 @@ export class CodeConverter implements FlexConverter {
     component.contents.push(codeComponent)
     return [component]
   }
-  async getCodeComponent(text: string, language: string | undefined): Promise<KnownFlexComponent> {
+  async getCodeComponent(
+    text: string,
+    language: string | undefined,
+  ): Promise<KnownFlexComponent> {
     const box: KnownFlexComponent = {
-      type: "box",
-      layout: "vertical",
-      paddingAll: "6px",
-      contents: []
+      type: 'box',
+      layout: 'vertical',
+      paddingAll: '6px',
+      contents: [],
     }
     if (!language) {
       box.contents.push(this.simpleCodeTextComponent(text))
@@ -47,7 +54,10 @@ export class CodeConverter implements FlexConverter {
     }
     return box
   }
-  private async getTokenComponents(text: string, language: string): Promise<messagingApi.FlexSpan[]> {
+  private async getTokenComponents(
+    text: string,
+    language: string,
+  ): Promise<messagingApi.FlexSpan[]> {
     const components: messagingApi.FlexSpan[] = []
     const tokens = await this.parser.parse(text, language)
     tokens.forEach((token) => {
@@ -59,49 +69,51 @@ export class CodeConverter implements FlexConverter {
         color = `${baseColor}${opacityHex}`
       }
       components.push({
-        type: "span",
+        type: 'span',
         text: token.text,
         color,
         weight: style.fontWeight,
-        style: style.fontStyle
+        style: style.fontStyle,
       })
     })
     return components
   }
   private simpleCodeTextComponent(text: string): messagingApi.FlexText {
     return {
-      type: "text",
+      type: 'text',
       text,
-      size: "xs",
-      wrap: true,
-      color: this.theme.codeTextColor
-    }
-  }
-  private highlitedCodeTextComponent(spans: messagingApi.FlexSpan[]): messagingApi.FlexText {
-    return {
-      type: "text",
-      size: "xs",
+      size: 'xs',
       wrap: true,
       color: this.theme.codeTextColor,
-      contents: spans
+    }
+  }
+  private highlitedCodeTextComponent(
+    spans: messagingApi.FlexSpan[],
+  ): messagingApi.FlexText {
+    return {
+      type: 'text',
+      size: 'xs',
+      wrap: true,
+      color: this.theme.codeTextColor,
+      contents: spans,
     }
   }
   private getTitleComponent(text: string): KnownFlexComponent {
     return {
-      type: "box",
-      layout: "vertical",
+      type: 'box',
+      layout: 'vertical',
       contents: [
         {
-          type: "text",
+          type: 'text',
           text,
           color: this.theme.titleTextColor,
-          size: "xs"
-        }
+          size: 'xs',
+        },
       ],
       backgroundColor: this.theme.titleBackgroundColor,
-      paddingTop: "3px",
-      paddingBottom: "3px",
-      paddingStart: "6px"
+      paddingTop: '3px',
+      paddingBottom: '3px',
+      paddingStart: '6px',
     }
   }
 }

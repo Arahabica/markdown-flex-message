@@ -1,23 +1,23 @@
-import { Token } from "marked"
-import { FlexConverter } from "../types"
-import { GenericConverter } from "./converters/GenericConverter"
-import { HeadingConverter } from "./converters/HeadingConverter"
-import { CodeConverter } from "./converters/CodeConverter"
-import { ParagraphConverter } from "./converters/PragraphConverter"
-import { ImageConverter } from "./converters/ImageConverter"
-import { StrongConverter } from "./converters/StrongConverter"
-import { TextConverter } from "./converters/TextConverter"
-import { EmConverter } from "./converters/EmConverter"
-import { LinkConverter } from "./converters/LinkConverter"
-import { DelConverter } from "./converters/DelConverter"
-import { CodeSpanConverter } from "./converters/CodeSpanConverter"
-import { BlockquoteConverter } from "./converters/BlockquotesConverter"
-import { ListConverter } from "./converters/ListConverter"
-import { TableConverter } from "./converters/TableConverter"
-import { HrConverter } from "./converters/HrConverter"
-import { SpaceConverter } from "./converters/SpaceConverter"
-import { CodeParser } from "../code/CodeParser"
-import { DefaultCodeHighlightTheme } from "../code/DefaultCodeHighlightTheme"
+import { Token } from 'marked'
+import { FlexConverter } from '../types'
+import { GenericConverter } from './converters/GenericConverter'
+import { HeadingConverter } from './converters/HeadingConverter'
+import { CodeConverter } from './converters/CodeConverter'
+import { ParagraphConverter } from './converters/PragraphConverter'
+import { ImageConverter } from './converters/ImageConverter'
+import { StrongConverter } from './converters/StrongConverter'
+import { TextConverter } from './converters/TextConverter'
+import { EmConverter } from './converters/EmConverter'
+import { LinkConverter } from './converters/LinkConverter'
+import { DelConverter } from './converters/DelConverter'
+import { CodeSpanConverter } from './converters/CodeSpanConverter'
+import { BlockquoteConverter } from './converters/BlockquotesConverter'
+import { ListConverter } from './converters/ListConverter'
+import { TableConverter } from './converters/TableConverter'
+import { HrConverter } from './converters/HrConverter'
+import { SpaceConverter } from './converters/SpaceConverter'
+import { CodeParser } from '../code/CodeParser'
+import { DefaultCodeHighlightTheme } from '../code/DefaultCodeHighlightTheme'
 
 export class ConverterFactory {
   create(token: Token): FlexConverter {
