@@ -3,18 +3,20 @@ import { ImageSizeScale } from '../../lib/ImageSizeScale'
 
 describe('ImageSizeScale', () => {
   describe('size', () => {
-    it('jpg', async () => {
-      const imageUrl = "https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=markdown-flex-message"
+    it('png', async () => {
+      const imageUrl =
+        'https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/markdown-flex-message.png'
       const res = await fetch(imageUrl)
       const arrayBuffer = await res.arrayBuffer()
       const buffer = Buffer.from(arrayBuffer)
 
       const scale = new ImageSizeScale()
       const size = scale.size(buffer)
-      expect(size).toEqual({ width: 400, height: 100 })
+      expect(size).toEqual({ width: 1695, height: 1695 })
     })
     it('pdf', async () => {
-      const imageUrl = "https://www.kansaigaidai.ac.jp/asp/img/pdf/82/7a79c35f7ce0704dec63be82440c8182.pdf"
+      const imageUrl =
+        'https://www.kansaigaidai.ac.jp/asp/img/pdf/82/7a79c35f7ce0704dec63be82440c8182.pdf'
       const res = await fetch(imageUrl)
       const arrayBuffer = await res.arrayBuffer()
       const buffer = Buffer.from(arrayBuffer)

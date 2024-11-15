@@ -2,7 +2,7 @@ import {
   MarkdownFlexMessage,
   convertToFlexMessage,
   convertToFlexBubble,
-  convertToFlexBox
+  convertToFlexBox,
 } from '../markdown-flex-message'
 import { it, describe, expect } from 'vitest'
 import { promises as fsPromises } from 'fs'
@@ -12,10 +12,14 @@ const dir = join(__dirname, 'resources', 'markdown')
 describe('MarkdownFlexMessage', () => {
   describe('MarkdownFlexMessage#convert', () => {
     it('should return an array of tokens', async () => {
-      const markdown = await fsPromises.readFile(join(dir, '01hello.md'), 'utf-8')
+      const markdown = await fsPromises.readFile(
+        join(dir, '01hello.md'),
+        'utf-8',
+      )
       const json = await fsPromises.readFile(join(dir, '01hello.json'), 'utf-8')
       const markdownFlexMessage = new MarkdownFlexMessage()
-      const { flexBubble } = await markdownFlexMessage.convertToFlexBubble(markdown)
+      const { flexBubble } =
+        await markdownFlexMessage.convertToFlexBubble(markdown)
       // console.log(JSON.stringify(flexContainer, null, 2))
       expect(flexBubble.type).toEqual('bubble')
       expect(flexBubble).toEqual(JSON.parse(json))
@@ -24,8 +28,14 @@ describe('MarkdownFlexMessage', () => {
 })
 describe('convertToFlexMessage', () => {
   it('default_alt_text', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '07blockquote.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '07blockquote.json'),
+      'utf-8',
+    )
     const { flexMessage } = await convertToFlexMessage(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexMessage, null, 2))
@@ -34,14 +44,22 @@ describe('convertToFlexMessage', () => {
       expect(flexMessage).toEqual({
         type: 'flex',
         altText: markdown.slice(0, 100),
-        contents: flexBubble
+        contents: flexBubble,
       })
     }
   })
   it('alt_text', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
-    const { flexMessage } = await convertToFlexMessage(markdown, { altText: 'Alternative text' })
+    const markdown = await fsPromises.readFile(
+      join(dir, '07blockquote.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '07blockquote.json'),
+      'utf-8',
+    )
+    const { flexMessage } = await convertToFlexMessage(markdown, {
+      altText: 'Alternative text',
+    })
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexMessage, null, 2))
     } else {
@@ -49,7 +67,7 @@ describe('convertToFlexMessage', () => {
       expect(flexMessage).toEqual({
         type: 'flex',
         altText: 'Alternative text',
-        contents: flexBubble
+        contents: flexBubble,
       })
     }
   })
@@ -67,7 +85,10 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('headers', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '02headers.md'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '02headers.md'),
+      'utf-8',
+    )
     const json = await fsPromises.readFile(join(dir, '02headers.json'), 'utf-8')
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
@@ -77,8 +98,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('decorate', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '03decorate.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '03decorate.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '03decorate.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '03decorate.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -87,8 +114,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('code_with_lang', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '05code_with_lang.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '05code_with_lang.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '05code_with_lang.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '05code_with_lang.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -97,8 +130,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('code_with_no_lang', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '06code_no_lang.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '06code_no_lang.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '06code_no_lang.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '06code_no_lang.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -107,8 +146,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('blockquote', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '07blockquote.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '07blockquote.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '07blockquote.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '07blockquote.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -117,8 +162,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('list_unordered', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '08list_unordered.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '08list_unordered.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '08list_unordered.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '08list_unordered.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -127,8 +178,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('list_ordered', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '09list_ordered.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '09list_ordered.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '09list_ordered.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '09list_ordered.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -167,8 +224,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('code_many', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '13code_many.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '13code_many.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '13code_many.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '13code_many.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -177,8 +240,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('code_only', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '14code_only.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '14code_only.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '14code_only.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '14code_only.json'),
+      'utf-8',
+    )
     const { flexBubble, textType } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -201,8 +270,14 @@ describe('convertToFlexBubble', () => {
     }
   })
   it('image_invalid', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '16image_invalid.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '16image_invalid.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '16image_invalid.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '16image_invalid.json'),
+      'utf-8',
+    )
     const { flexBubble } = await convertToFlexBubble(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBubble, null, 2))
@@ -215,8 +290,14 @@ describe('convertToFlexBubble', () => {
 
 describe('convertToFlexBox', () => {
   it('code_only', async () => {
-    const markdown = await fsPromises.readFile(join(dir, '14code_only.md'), 'utf-8')
-    const json = await fsPromises.readFile(join(dir, '14code_only.json'), 'utf-8')
+    const markdown = await fsPromises.readFile(
+      join(dir, '14code_only.md'),
+      'utf-8',
+    )
+    const json = await fsPromises.readFile(
+      join(dir, '14code_only.json'),
+      'utf-8',
+    )
     const { flexBox, textType } = await convertToFlexBox(markdown)
     if (process.env.DEBUG) {
       console.log(JSON.stringify(flexBox, null, 2))
