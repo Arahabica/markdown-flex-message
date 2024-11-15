@@ -36,6 +36,7 @@ hoge
               type: 'text',
               raw: 'Hello',
               text: 'Hello',
+              escaped: false,
             },
           ],
         },
@@ -49,6 +50,7 @@ hoge
               type: 'text',
               raw: 'World',
               text: 'World',
+              escaped: false,
             },
           ],
         },
@@ -61,6 +63,7 @@ hoge
               type: 'text',
               raw: 'hoge',
               text: 'hoge',
+              escaped: false,
             },
           ],
         },
@@ -84,6 +87,7 @@ hello **World**!
           type: 'text',
           raw: 'hello ',
           text: 'hello ',
+          escaped: false,
         },
         {
           type: 'strong',
@@ -94,6 +98,7 @@ hello **World**!
               type: 'text',
               raw: 'World',
               text: 'World',
+              escaped: false,
             },
           ],
         },
@@ -101,6 +106,7 @@ hello **World**!
           type: 'text',
           raw: '!',
           text: '!',
+          escaped: false,
         },
       ])
     })
