@@ -1,11 +1,11 @@
-import { Token } from "marked"
-import { messagingApi } from "@line/bot-sdk"
+import { Token } from 'marked'
+import { messagingApi } from '@line/bot-sdk'
 
-export * from "./MarkdownFlexMessage"
-export * from "./markdown-flex-message"
+export * from './MarkdownFlexMessage'
+export * from './markdown-flex-message'
 
 export type ConvertOptions = {
-  size?: "nano" | "micro" | "kilo" | "mega" | "giga"
+  size?: 'nano' | 'micro' | 'kilo' | 'mega' | 'giga'
 }
 
 export type ConvertFlexMessageOptions = {
@@ -20,51 +20,51 @@ export type TextType = 'markdown' | 'code' | 'plain'
 
 export type DecoratableFlex = messagingApi.FlexSpan | messagingApi.FlexText
 
-export type KnownFlexComponent = 
-  messagingApi.FlexBox |
-  messagingApi.FlexButton |
-  messagingApi.FlexFiller | 
-  messagingApi.FlexIcon |
-  messagingApi.FlexImage |
-  messagingApi.FlexSeparator |
-  messagingApi.FlexSpan |
-  messagingApi.FlexText |
-  messagingApi.FlexVideo
+export type KnownFlexComponent =
+  | messagingApi.FlexBox
+  | messagingApi.FlexButton
+  | messagingApi.FlexFiller
+  | messagingApi.FlexIcon
+  | messagingApi.FlexImage
+  | messagingApi.FlexSeparator
+  | messagingApi.FlexSpan
+  | messagingApi.FlexText
+  | messagingApi.FlexVideo
 
 export type CodeTokenType =
-  "keyword" |
-  "number" |
-  "function" |
-  "string" |
-  "boolean" |
-  "operator" |
-  "punctuation" |
-  "atrule" |
-  "url" |
-  "selector" |
-  "property" |
-  "important" |
-  "style" |
-  "comment" |
-  "class-name" |
-  "doctype" |
-  "prolog" |
-  "cdata" |
-  "namespace" |
-  "regex" |
-  "tag" |
-  "attr-name" |
-  "attr-value" |
-  "atrule" |
-  "char" |
-  "inserted" |
-  "entity" |
-  "bold" |
-  "italic" |
-  "deleted" |
-  "symbol" |
-  "variable" |
-  "other" 
+  | 'keyword'
+  | 'number'
+  | 'function'
+  | 'string'
+  | 'boolean'
+  | 'operator'
+  | 'punctuation'
+  | 'atrule'
+  | 'url'
+  | 'selector'
+  | 'property'
+  | 'important'
+  | 'style'
+  | 'comment'
+  | 'class-name'
+  | 'doctype'
+  | 'prolog'
+  | 'cdata'
+  | 'namespace'
+  | 'regex'
+  | 'tag'
+  | 'attr-name'
+  | 'attr-value'
+  | 'atrule'
+  | 'char'
+  | 'inserted'
+  | 'entity'
+  | 'bold'
+  | 'italic'
+  | 'deleted'
+  | 'symbol'
+  | 'variable'
+  | 'other'
 
 export type CodeToken = {
   type: CodeTokenType

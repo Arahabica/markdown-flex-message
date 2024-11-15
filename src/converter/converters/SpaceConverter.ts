@@ -1,5 +1,5 @@
-import { Tokens } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../../types"
+import { Tokens } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../../types'
 
 export class SpaceConverter implements FlexConverter {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

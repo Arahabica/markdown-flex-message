@@ -1,6 +1,6 @@
-import { Tokens } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../../types"
-import { InlineConverter } from "./InlineConverter"
+import { Tokens } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../../types'
+import { InlineConverter } from './InlineConverter'
 
 export class TableConverter implements FlexConverter {
   private inlineConverter: InlineConverter
@@ -18,13 +18,13 @@ export class TableConverter implements FlexConverter {
     for (const row of token.rows) {
       contents.push({
         type: 'separator',
-        margin: 'md'
+        margin: 'md',
       })
       const rowComponent: KnownFlexComponent = {
         type: 'box',
         layout: 'vertical',
         spacing: 'sm',
-        contents: []
+        contents: [],
       }
       let cellIndex: number = 0
       for (const cell of row) {
@@ -35,7 +35,7 @@ export class TableConverter implements FlexConverter {
           type: 'box',
           layout: 'horizontal',
           spacing: 'md',
-          contents: [headerCell, bodyCell]
+          contents: [headerCell, bodyCell],
         }
         rowComponent.contents.push(cellComponent)
         cellIndex++
@@ -51,7 +51,9 @@ export class TableConverter implements FlexConverter {
     }
     return contents
   }
-  private async headerCell(cell: Tokens.TableCell | undefined): Promise<KnownFlexComponent> {
+  private async headerCell(
+    cell: Tokens.TableCell | undefined,
+  ): Promise<KnownFlexComponent> {
     const tokens = cell?.tokens || []
     const contents = await this.inlineConverter.convert(tokens)
     for (const content of contents) {
@@ -68,10 +70,13 @@ export class TableConverter implements FlexConverter {
       type: 'box',
       layout: 'vertical',
       flex: this.headerRatio,
-      contents
+      contents,
     }
   }
-  private async bodyCell(cell: Tokens.TableCell | undefined, align: string): Promise<KnownFlexComponent> {
+  private async bodyCell(
+    cell: Tokens.TableCell | undefined,
+    align: string,
+  ): Promise<KnownFlexComponent> {
     const tokens = cell?.tokens || []
     const contents = await this.inlineConverter.convert(tokens)
     for (const content of contents) {
@@ -88,17 +93,17 @@ export class TableConverter implements FlexConverter {
       type: 'box',
       layout: 'vertical',
       flex: this.bodyRatio,
-      contents
+      contents,
     }
   }
-  private convertAlign(align: string): "center" | "start" | "end" | undefined {
+  private convertAlign(align: string): 'center' | 'start' | 'end' | undefined {
     switch (align) {
-    case 'center':
-      return 'center'
-    case 'right':
-      return 'end'
-    default:
-      return 'start'
+      case 'center':
+        return 'center'
+      case 'right':
+        return 'end'
+      default:
+        return 'start'
     }
   }
 }
