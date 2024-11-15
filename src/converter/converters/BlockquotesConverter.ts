@@ -1,20 +1,20 @@
-import { Tokens } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../../types"
-import { MainConverter } from "../MainConverter"
+import { Tokens } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../../types'
+import { MainConverter } from '../MainConverter'
 
 export class BlockquoteConverter implements FlexConverter {
-  private readonly borderColor = "#abafb9"
-  private readonly textColor = "#666979"
-  private readonly borderWidth = "3px"
+  private readonly borderColor = '#abafb9'
+  private readonly textColor = '#666979'
+  private readonly borderWidth = '3px'
 
   async convert(token: Tokens.Blockquote): Promise<KnownFlexComponent[]> {
     const mainConverter = new MainConverter()
     const childContents: KnownFlexComponent[] = []
-    for(const childToken of token.tokens) {
+    for (const childToken of token.tokens) {
       const contents = await mainConverter.convert(childToken)
       childContents.push(...contents)
     }
-    childContents.forEach(content => {
+    childContents.forEach((content) => {
       if (content.type === 'text' && content.color === undefined) {
         content.color = this.textColor
       }
@@ -29,7 +29,7 @@ export class BlockquoteConverter implements FlexConverter {
           type: 'box',
           layout: 'vertical',
           width: this.borderWidth,
-          contents: []
+          contents: [],
         },
         {
           type: 'box',
@@ -38,9 +38,9 @@ export class BlockquoteConverter implements FlexConverter {
           paddingBottom: '4px',
           paddingStart: '8px',
           backgroundColor: '#ffffff',
-          contents: childContents
-        }
-      ]
+          contents: childContents,
+        },
+      ],
     }
     return [component]
   }

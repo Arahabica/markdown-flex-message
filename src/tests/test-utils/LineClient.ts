@@ -1,4 +1,4 @@
-import { messagingApi } from "@line/bot-sdk"
+import { messagingApi } from '@line/bot-sdk'
 
 type LineClientConfig = {
   channelAccessToken: string
@@ -29,21 +29,23 @@ export class LineClient {
   constructor(config: LineClientConfig) {
     this.config = config
   }
-  async validateReplyMessages(messages: messagingApi.Message[]): Promise<ValidateReplyMessagesResponse> {
+  async validateReplyMessages(
+    messages: messagingApi.Message[],
+  ): Promise<ValidateReplyMessagesResponse> {
     const { endpoint } = this
     const { channelAccessToken } = this.config
     const url = `${endpoint}/message/validate/reply`
     const headers = {
-      'Authorization': `Bearer ${channelAccessToken}`,
-      'Content-Type': 'application/json'
+      Authorization: `Bearer ${channelAccessToken}`,
+      'Content-Type': 'application/json',
     }
     const body = {
-      messages: messages
+      messages: messages,
     }
     const response = await fetch(url, {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     })
     if (response.status === 200) {
       return { status: 'success' }

@@ -1,4 +1,4 @@
 Hello
 
-![image](https://via.placeholder.com/400x100/79b74a/fff.jpg/?text=markdown-flex-message)
+![image](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/markdown-flex-message.png)
 hey

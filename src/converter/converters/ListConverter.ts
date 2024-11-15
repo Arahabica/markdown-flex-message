@@ -1,9 +1,9 @@
-import { Tokens } from "marked"
-import { FlexConverter, KnownFlexComponent } from "../../types"
-import { InlineConverter } from "./InlineConverter"
+import { Tokens } from 'marked'
+import { FlexConverter, KnownFlexComponent } from '../../types'
+import { InlineConverter } from './InlineConverter'
 
 export class ListConverter implements FlexConverter {
-  private readonly markerColor = "#666979"
+  private readonly markerColor = '#666979'
   private readonly dotRadius = 2
   private readonly inlineConverter: InlineConverter
 
@@ -29,15 +29,18 @@ export class ListConverter implements FlexConverter {
             type: 'box',
             layout: 'vertical',
             paddingStart: `${marginLeft}px`,
-            contents
-          }
-        ]
+            contents,
+          },
+        ],
       })
       index++
     }
     return components
   }
-  private generateMarker(token: Tokens.List, index: number): KnownFlexComponent {
+  private generateMarker(
+    token: Tokens.List,
+    index: number,
+  ): KnownFlexComponent {
     if (token.ordered) {
       const number = (token.start || 0) + index
       return this.generateOrderedMarker(token, number)
@@ -55,10 +58,13 @@ export class ListConverter implements FlexConverter {
       cornerRadius: `${this.dotRadius}px`,
       offsetTop: '12px',
       offsetStart: '4px',
-      contents: []
+      contents: [],
     }
   }
-  private generateOrderedMarker(token: Tokens.List, index: number): KnownFlexComponent {
+  private generateOrderedMarker(
+    token: Tokens.List,
+    index: number,
+  ): KnownFlexComponent {
     const width = this.calculateOrderedMarkerWidth(token)
     const lastDigit = index % 10
     // The positions of 1 and 7 are adjusted due to their narrow character widths.
@@ -82,8 +88,8 @@ export class ListConverter implements FlexConverter {
             text: '.',
             color: this.markerColor,
             flex: 0,
-          }
-        ]
+          },
+        ],
       }
     }
     return {
@@ -96,8 +102,8 @@ export class ListConverter implements FlexConverter {
           type: 'text',
           text: `${index}.`,
           color: this.markerColor,
-        }
-      ]
+        },
+      ],
     }
   }
   private calculateOrderedMarkerWidth(token: Tokens.List): number {

@@ -4,9 +4,12 @@ import { CodeToken, CodeTokenType } from '../types'
 export class CodeParser {
   async parse(code: string, language: string): Promise<CodeToken[]> {
     const prismTokens = await this.parseAsPrismToken(code, language)
-    return prismTokens.map(token => this.convertFromPrismToken(token))
+    return prismTokens.map((token) => this.convertFromPrismToken(token))
   }
-  private async parseAsPrismToken(code: string, language: string): Promise<(string | Token)[]> {
+  private async parseAsPrismToken(
+    code: string,
+    language: string,
+  ): Promise<(string | Token)[]> {
     const grammar = await this.loadGrammar(language)
     return tokenize(code, grammar)
   }
@@ -14,19 +17,19 @@ export class CodeParser {
     if (typeof token === 'string') {
       return {
         type: 'other',
-        text: token
+        text: token,
       }
     }
     const text = this.stringifyToken(token)
     if (CodtTokenTypeList.includes(token.type as CodeTokenType)) {
       return {
         type: token.type as CodeTokenType,
-        text
+        text,
       }
     }
     return {
       type: 'other',
-      text
+      text,
     }
   }
   private stringifyToken(token: Token | string): string {
@@ -57,37 +60,37 @@ export class CodeParser {
 }
 
 export const CodtTokenTypeList: CodeTokenType[] = [
-  "keyword",
-  "number",
-  "function",
-  "string",
-  "boolean",
-  "operator",
-  "punctuation",
-  "atrule",
-  "url",
-  "selector",
-  "property",
-  "important",
-  "style",
-  "comment",
-  "class-name",
-  "doctype",
-  "prolog",
-  "cdata",
-  "namespace",
-  "regex",
-  "tag",
-  "attr-name",
-  "attr-value",
-  "atrule",
-  "char",
-  "inserted",
-  "entity",
-  "bold",
-  "italic",
-  "deleted",
-  "symbol",
-  "variable",
-  "other"
+  'keyword',
+  'number',
+  'function',
+  'string',
+  'boolean',
+  'operator',
+  'punctuation',
+  'atrule',
+  'url',
+  'selector',
+  'property',
+  'important',
+  'style',
+  'comment',
+  'class-name',
+  'doctype',
+  'prolog',
+  'cdata',
+  'namespace',
+  'regex',
+  'tag',
+  'attr-name',
+  'attr-value',
+  'atrule',
+  'char',
+  'inserted',
+  'entity',
+  'bold',
+  'italic',
+  'deleted',
+  'symbol',
+  'variable',
+  'other',
 ]

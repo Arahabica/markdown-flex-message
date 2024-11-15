@@ -35,9 +35,10 @@ hoge
             {
               type: 'text',
               raw: 'Hello',
-              text: 'Hello'
-            }
-          ]
+              text: 'Hello',
+              escaped: false,
+            },
+          ],
         },
         {
           type: 'heading',
@@ -48,9 +49,10 @@ hoge
             {
               type: 'text',
               raw: 'World',
-              text: 'World'
-            }
-          ]
+              text: 'World',
+              escaped: false,
+            },
+          ],
         },
         {
           type: 'paragraph',
@@ -60,10 +62,11 @@ hoge
             {
               type: 'text',
               raw: 'hoge',
-              text: 'hoge'
-            }
-          ]
-        }
+              text: 'hoge',
+              escaped: false,
+            },
+          ],
+        },
       ])
     })
     it('strong', () => {
@@ -81,36 +84,40 @@ hello **World**!
       const spans = paragraph.tokens
       expect(spans).toEqual([
         {
-          "type": "text",
-          "raw": "hello ",
-          "text": "hello "
+          type: 'text',
+          raw: 'hello ',
+          text: 'hello ',
+          escaped: false,
         },
         {
-          "type": "strong",
-          "raw": "**World**",
-          "text": "World",
-          "tokens": [
+          type: 'strong',
+          raw: '**World**',
+          text: 'World',
+          tokens: [
             {
-              "type": "text",
-              "raw": "World",
-              "text": "World"
-            }
-          ]
+              type: 'text',
+              raw: 'World',
+              text: 'World',
+              escaped: false,
+            },
+          ],
         },
         {
-          "type": "text",
-          "raw": "!",
-          "text": "!"
-        }
+          type: 'text',
+          raw: '!',
+          text: '!',
+          escaped: false,
+        },
       ])
     })
     it('plain', () => {
       const parser = new MarkDownParser()
       const markdown =
-        "As I Remember, Adam, It Was Upon This Fashion Bequeathed Me " +
-        "By Will But Poor A Thousand Crowns, And, As Thou Sayest, " +
-        "Charged My Brother, On His Blessing, To Breed Me Well: And There Begins My Sadness." + "\n\n" +
-        "For I Didst Believe Much Joy Would Follow It, "
+        'As I Remember, Adam, It Was Upon This Fashion Bequeathed Me ' +
+        'By Will But Poor A Thousand Crowns, And, As Thou Sayest, ' +
+        'Charged My Brother, On His Blessing, To Breed Me Well: And There Begins My Sadness.' +
+        '\n\n' +
+        'For I Didst Believe Much Joy Would Follow It, '
       const { textType } = parser.parse(markdown)
       expect(textType).toEqual('plain')
     })
@@ -122,7 +129,8 @@ hello **World**!
     })
     it('code_with_text', () => {
       const parser = new MarkDownParser()
-      const markdown = 'This is a javascript sample code. \n```javascript\nconst a = 1\n```'
+      const markdown =
+        'This is a javascript sample code. \n```javascript\nconst a = 1\n```'
       const { textType } = parser.parse(markdown)
       expect(textType).toEqual('markdown')
     })

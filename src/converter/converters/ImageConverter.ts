@@ -1,7 +1,7 @@
-import { Tokens } from "marked"
-import { messagingApi } from "@line/bot-sdk"
-import { FlexConverter, KnownFlexComponent } from "../../types"
-import { ImageSizeScale } from "../../lib/ImageSizeScale"
+import { Tokens } from 'marked'
+import { messagingApi } from '@line/bot-sdk'
+import { FlexConverter, KnownFlexComponent } from '../../types'
+import { ImageSizeScale } from '../../lib/ImageSizeScale'
 
 export class ImageConverter implements FlexConverter {
   private readonly imageSizeScale: ImageSizeScale
@@ -32,7 +32,9 @@ export class ImageConverter implements FlexConverter {
       return '20:13'
     }
   }
-  private async calculateSize(imageUrl: string): Promise<{ width: number, height: number }> {
+  private async calculateSize(
+    imageUrl: string,
+  ): Promise<{ width: number; height: number }> {
     const res = await fetch(imageUrl)
     const arrayBuffer = await res.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
