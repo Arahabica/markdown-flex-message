@@ -276,13 +276,13 @@ convertToFlexBox(markdownText)
 
 #### Talk List Screen
 
-![Example5 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example5_2_alt.jpg)
+![Example5 Alt](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example5_3_alt.jpg)
 
 #### Talk Screen
 
 A button is positioned below the Markdown.
 
-![Example5 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example5_2_flex.png)
+![Example5 Flex](https://raw.githubusercontent.com/Arahabica/markdown-flex-message/main/docs/images/example5_3_flex.jpg)
 
 # Methods
 
