@@ -12,7 +12,7 @@ export class LinkConverter implements FlexConverter {
         color: '#0c93e4',
         action: {
           type: 'uri',
-          label: text,
+          label: text.slice(0, 40),
           uri: href,
         },
       },
