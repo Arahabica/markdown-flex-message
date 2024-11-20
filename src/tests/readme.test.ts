@@ -181,7 +181,7 @@ describe('README.md', () => {
                   {
                     type: 'button' as const,
                     action: {
-                      type: 'clipboard',
+                      type: 'clipboard' as const,
                       label: 'Copy',
                       clipboardText: markdownText.slice(0, 1000),
                     },
