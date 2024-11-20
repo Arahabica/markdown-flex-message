@@ -169,7 +169,7 @@ describe('README.md', () => {
         .then(({ flexBox }) => {
           const message = {
             type: 'flex' as const,
-            altText: 'Fruits',
+            altText: markdownText.slice(0, 200),
             contents: {
               type: 'bubble' as const,
               size: 'mega' as const,
@@ -181,9 +181,9 @@ describe('README.md', () => {
                   {
                     type: 'button' as const,
                     action: {
-                      type: 'uri' as const,
-                      label: 'Show more',
-                      uri: 'http://linecorp.com/',
+                      type: 'clipboard',
+                      label: 'Copy',
+                      clipboardText: markdownText.slice(0, 1000),
                     },
                   },
                 ],
