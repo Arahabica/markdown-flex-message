@@ -1,5 +1,4 @@
 import { it, describe } from 'vitest'
-// import * as line from '@line/bot-sdk'
 import { messagingApi } from '@line/bot-sdk'
 import {
   convertToFlexMessage,
