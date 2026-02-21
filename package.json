@@ -19,6 +19,7 @@
     "@types/prismjs": "^1.26.6",
     "@vitest/coverage-v8": "^3.2.4",
     "typescript": "^5.9.3",
+    "vite": "^7.3.1",
     "vitest": "^3.2.4"
   },
   "dependencies": {
@@ -37,10 +38,13 @@
   "engines": {
     "node": ">= 20"
   },
-  "packageManager": "pnpm@6.11.0",
+  "packageManager": "pnpm@10.30.1",
   "pnpm": {
     "overrides": {
       "minimatch": ">=10.2.1"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
