@@ -31,6 +31,7 @@ jobs:
       - name: Generate coverage file
         run: pnpm run coverage
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v7.1.1
         with:
           files: ./coverage/coverage-final.json
+          fail_ci_if_error: true
