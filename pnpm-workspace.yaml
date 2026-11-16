@@ -1,0 +1,8 @@
+pmOnFail: error
+minimumReleaseAge: 10080 # 公開後1週間を経過したバージョンだけを解決する。
+minimumReleaseAgeIgnoreMissingTime: false
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 525600 # 公開から1年以上経過した版はロックファイルの完全性検証に委ねる。
+
+allowBuilds:
+  esbuild: true
